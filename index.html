@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+    <title>ردیاب خورشیدی دو محوره</title>
+    
+    <!-- فونت وزیرمتن از CDN (نیاز به دانلود نداره) -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* ========== تنظیمات کلی ========== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ========== اعمال فونت وزیرمتن روی کل سایت ========== */
+        body {
+            font-family: 'Vazirmatn', 'Inter', sans-serif;
+            background: #F8F9FA;
+            color: #212529;
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ========== نوار ناوبری ========== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+            padding: 16px 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1A73E8;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #0D47A1;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #1A73E8;
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.6rem;
+            background: none;
+            border: none;
+            color: #1A73E8;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+
+        /* ========== بخش Hero ========== */
+        .hero {
+            padding: 140px 0 80px;
+            background: linear-gradient(135deg, #E8F0FE 0%, #FFFFFF 100%);
+            text-align: center;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: #0D47A1;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #495057;
+            max-width: 700px;
+            margin: 0 auto 32px;
+            padding: 0 16px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 36px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: #1A73E8;
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(26, 115, 232, 0.3);
+        }
+
+        .btn-primary:hover {
+            background: #0D47A1;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(26, 115, 232, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #1A73E8;
+            border: 2px solid #1A73E8;
+        }
+
+        .btn-outline:hover {
+            background: #1A73E8;
+            color: #fff;
+        }
+
+        /* ========== بخش‌های عمومی ========== */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #0D47A1;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .section-title span {
+            color: #1A73E8;
+        }
+
+        /* ========== درباره پروژه ========== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .about-text p {
+            font-size: 1.05rem;
+            color: #495057;
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .stat-card {
+            background: #fff;
+            padding: 28px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            text-align: center;
+            border: 1px solid #f1f3f5;
+        }
+
+        .stat-card i {
+            font-size: 2rem;
+            color: #1A73E8;
+            margin-bottom: 8px;
+        }
+
+        .stat-card h3 {
+            font-size: 1.8rem;
+            color: #0D47A1;
+        }
+
+        .stat-card p {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        /* ========== تیم ========== */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+        }
+
+        .team-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px 20px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+            border: 1px solid #f1f3f5;
+            transition: transform 0.2s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .team-card .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: #e9ecef;
+            margin: 0 auto 16px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-card .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .team-card .avatar i {
+            font-size: 3rem;
+            color: #adb5bd;
+        }
+
+        .team-card h4 {
+            font-size: 1.1rem;
+            color: #0D47A1;
+            margin-top: 4px;
+        }
+
+        .team-card .role {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+
+        /* ========== ویژگی‌ها ========== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 32px 24px;
+            border-radius: 16px;
+            border: 1px solid #f1f3f5;
+            text-align: center;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+        }
+
+        .feature-card i {
+            font-size: 2.4rem;
+            color: #1A73E8;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h4 {
+            font-size: 1.1rem;
+            color: #0D47A1;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.95rem;
+            color: #6c757d;
+        }
+
+        /* ========== اسلایدر گالری ========== */
+        .slider-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            background: #fff;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-slide {
+            min-width: 100%;
+            height: 500px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: end;
+            justify-content: center;
+            padding-bottom: 40px;
+            position: relative;
+        }
+
+        .slider-slide::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+        }
+
+        .slider-slide .slide-label {
+            position: relative;
+            z-index: 2;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(6px);
+            padding: 10px 24px;
+            border-radius: 40px;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255,255,255,0.9);
+            border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            color: #0D47A1;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            transition: all 0.2s;
+        }
+
+        .slider-btn:hover {
+            background: #1A73E8;
+            color: #fff;
+        }
+
+        .slider-btn.prev {
+            left: 16px;
+        }
+
+        .slider-btn.next {
+            right: 16px;
+        }
+
+        .slider-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 0 20px;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .slider-dot.active {
+            background: #1A73E8;
+            transform: scale(1.2);
+        }
+
+        /* ========== FAQ ========== */
+        .faq-container {
+            max-width: 750px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #e9ecef;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            transition: all 0.2s;
+        }
+
+        .faq-item:hover {
+            border-color: #1A73E8;
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 24px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #0D47A1;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: right;
+            font-family: inherit;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: #f8f9fa;
+        }
+
+        .faq-question i {
+            font-size: 1.2rem;
+            color: #1A73E8;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+            padding: 0 24px;
+            color: #495057;
+            font-size: 0.98rem;
+            line-height: 1.8;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 500px;
+            padding: 0 24px 20px;
+        }
+
+        /* ========== ویدیو ========== */
+        .video-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #dee2e6;
+            border-radius: 20px;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6c757d;
+            font-weight: 500;
+            border: 2px dashed #adb5bd;
+            overflow: hidden;
+        }
+
+        .video-wrapper video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-placeholder i {
+            font-size: 3rem;
+            margin-left: 12px;
+            color: #1A73E8;
+        }
+
+        /* ========== فوتر ========== */
+        footer {
+            background: #0D47A1;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+        }
+
+        footer .socials {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+        }
+
+        footer .socials a {
+            color: #fff;
+            font-size: 1.6rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        footer .socials a:hover {
+            opacity: 1;
+        }
+
+        /* ========== دکمه بازگشت به بالا ========== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #1A73E8;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 16px rgba(26,115,232,0.3);
+            border: none;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s;
+            pointer-events: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .back-to-top:hover {
+            background: #0D47A1;
+            transform: translateY(-4px);
+        }
+
+        /* ========== واکنش‌گرا (موبایل و تبلت) ========== */
+        @media (max-width: 992px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .slider-slide {
+                height: 400px;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background: #fff;
+                position: absolute;
+                top: 70px;
+                right: 16px;
+                left: 16px;
+                padding: 24px;
+                border-radius: 16px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+                gap: 16px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero {
+                padding: 110px 0 50px;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                padding: 0 8px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .container {
+                padding: 0 16px;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 20px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .slider-slide {
+                height: 300px;
+            }
+
+            .slider-btn {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .slider-btn.prev {
+                left: 8px;
+            }
+
+            .slider-btn.next {
+                right: 8px;
+            }
+
+            .stat-card {
+                padding: 20px 16px;
+            }
+
+            .stat-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .faq-question {
+                padding: 16px 18px;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer {
+                font-size: 0.9rem;
+                padding: 0 18px;
+            }
+
+            .faq-item.open .faq-answer {
+                padding: 0 18px 16px;
+            }
+
+            .btn {
+                padding: 12px 28px;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .about-grid {
+                gap: 24px;
+            }
+
+            .about-text p {
+                font-size: 0.95rem;
+            }
+
+            .feature-card {
+                padding: 24px 16px;
+            }
+
+            .video-wrapper {
+                aspect-ratio: 16/9;
+                border-radius: 12px;
+            }
+
+            footer {
+                padding: 30px 0;
+            }
+
+            footer .socials {
+                gap: 16px;
+            }
+
+            footer .socials a {
+                font-size: 1.4rem;
+            }
+
+            .back-to-top {
+                width: 44px;
+                height: 44px;
+                font-size: 1.2rem;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 90px 0 40px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .stat-card {
+                padding: 16px 12px;
+            }
+
+            .stat-card h3 {
+                font-size: 1.2rem;
+            }
+
+            .stat-card i {
+                font-size: 1.5rem;
+            }
+
+            .stat-card p {
+                font-size: 0.8rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .team-card {
+                padding: 20px 16px;
+            }
+
+            .team-card .avatar {
+                width: 90px;
+                height: 90px;
+            }
+
+            .team-card h4 {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+                margin-bottom: 32px;
+            }
+
+            .slider-slide {
+                height: 200px;
+                padding-bottom: 20px;
+            }
+
+            .slider-slide .slide-label {
+                padding: 6px 16px;
+                font-size: 0.8rem;
+            }
+
+            .slider-dots {
+                gap: 8px;
+                padding: 12px 0 16px;
+            }
+
+            .slider-dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .btn {
+                padding: 10px 24px;
+                font-size: 0.85rem;
+            }
+
+            .hero-buttons {
+                gap: 10px;
+            }
+
+            .faq-question {
+                font-size: 0.85rem;
+                padding: 14px 16px;
+            }
+
+            .faq-answer {
+                font-size: 0.85rem;
+            }
+
+            .video-placeholder i {
+                font-size: 2rem;
+            }
+
+            .video-placeholder {
+                font-size: 0.9rem;
+            }
+
+            footer p {
+                font-size: 0.85rem;
+            }
+
+            footer .socials a {
+                font-size: 1.2rem;
+            }
+
+            .back-to-top {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+                bottom: 16px;
+                right: 16px;
+            }
+
+            .container {
+                padding: 0 12px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .about-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .slider-slide {
+                height: 160px;
+            }
+
+            .btn {
+                padding: 8px 18px;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ========== نوار ناوبری ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Solar<span>Tracker</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="منو">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">درباره</a></li>
+                <li><a href="#team">تیم</a></li>
+                <li><a href="#features">دستاوردها</a></li>
+                <li><a href="#gallery">گالری</a></li>
+                <li><a href="#faq">سوالات</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ========== بخش Hero (صفحه اول) ========== -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>طراحی و ساخت ردیاب خورشیدی دو محوره</h1>
+            <p>افزایش بازدهی پنل‌های خورشیدی با ردیابی دقیق در دو محور با استفاده از ۴ سنسور LDR و آردوینو</p>
+            <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary">مشاهده پروژه</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== درباره پروژه ========== -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">درباره <span>پروژه</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>در این پروژه، یک سامانه ردیاب خورشیدی دو محوره با هدف افزایش راندمان جذب انرژی خورشیدی طراحی و ساخته شده است. برخلاف سیستم‌های تک‌محوره که تنها در یک راستا حرکت می‌کنند، ردیاب دو محوره قادر است با پیگیری دقیق موقعیت خورشید در هر دو جهت عمودی و افقی، پنل را در هر لحظه دقیقاً عمود بر پرتوهای تابشی قرار دهد.</p>
+                    <p>سیستم با استفاده از ۴ سنسور LDR، موقعیت خورشید را در دو محور آزیموت (شرق-غرب) و ارتفاع (شمال-جنوب) تشخیص داده و با کمک دو موتور سروو (MG995 و SG90)، پنل را همواره عمود بر تابش خورشید قرار می‌دهد. سازه اصلی با استفاده از چاپ سه‌بعدی و جنس PLA+ ساخته شده است.</p>
+                    <p style="font-weight: 600; color: #0D47A1;">افزایش بازدهی تا ۳۰ درصد نسبت به پنل ثابت، دقت ردیابی بهتر از ۱ درجه، عملکرد در شرایط نوری مختلف و قابلیت استفاده در هر نقطه بدون نیاز به کالیبراسیون مجدد از دستاوردهای این پروژه است.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <i class="fas fa-sun"></i>
+                        <h3>۳۰٪</h3>
+                        <p>افزایش بازدهی</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-arrows-alt"></i>
+                        <h3>دو محور</h3>
+                        <p>آزیموت و ارتفاع</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-microchip"></i>
+                        <h3>۴ LDR</h3>
+                        <p>سنسور نوری</p>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-cube"></i>
+                        <h3>PLA+</h3>
+                        <p>چاپ سه‌بعدی</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== تیم ========== -->
+    <section id="team" style="background:#f1f3f5;">
+        <div class="container">
+            <h2 class="section-title">اعضای <span>تیم</span></h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="images/team-1.jpg" alt="محمدصالح عرشی‌زاده" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
+                    </div>
+                    <h4>محمدصالح عرشی‌زاده</h4>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="images/team-2.jpg" alt="دانیال ایمان‌پور" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
+                    </div>
+                    <h4>دانیال ایمان‌پور</h4>
+                </div>
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="images/team-3.jpg" alt="پارسا اعظمی" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
+                    </div>
+                    <h4>پارسا اعظمی</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== دستاوردها ========== -->
+    <section id="features">
+        <div class="container">
+            <h2 class="section-title">دستاوردهای <span>پروژه</span></h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h4>دقت بالا</h4>
+                    <p>دقت ردیابی بهتر از ۱ درجه</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>افزایش بازدهی</h4>
+                    <p>تا ۳۰٪ بیشتر از پنل ثابت</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h4>عملکرد در ابری</h4>
+                    <p>کارکرد در شرایط نوری مختلف</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-globe-asia"></i>
+                    <h4>قابل حمل</h4>
+                    <p>قابل استفاده در هر نقطه بدون کالیبراسیون</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== گالری با اسلایدر ========== -->
+    <section id="gallery" style="background:#f1f3f5;">
+        <div class="container">
+            <h2 class="section-title">گالری <span>تصاویر</span></h2>
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slider-slide" style="background-image:url('images/gallery-1.jpg');">
+                        <span class="slide-label">🔧 چاپ قطعات</span>
+                    </div>
+                    <div class="slider-slide" style="background-image:url('images/gallery-2.jpg');">
+                        <span class="slide-label">⚡ سیم‌بندی</span>
+                    </div>
+                    <div class="slider-slide" style="background-image:url('images/gallery-3.jpg');">
+                        <span class="slide-label">🔩 مونتاژ</span>
+                    </div>
+                    <div class="slider-slide" style="background-image:url('images/gallery-4.jpg');">
+                        <span class="slide-label">✅ تست نهایی</span>
+                    </div>
+                    <div class="slider-slide" style="background-image:url('images/gallery-5.jpg');">
+                        <span class="slide-label">☀️ ردیاب در حال کار</span>
+                    </div>
+                    <div class="slider-slide" style="background-image:url('images/gallery-6.jpg');">
+                        <span class="slide-label">🎪 غرفه سمینار</span>
+                    </div>
+                </div>
+                <button class="slider-btn prev" id="prevBtn">‹</button>
+                <button class="slider-btn next" id="nextBtn">›</button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ویدیو ========== -->
+    <section id="video">
+        <div class="container">
+            <h2 class="section-title">ویدیوی <span>تایم‌لپس</span></h2>
+            <div class="video-wrapper">
+                <div class="video-placeholder">
+                    <i class="fas fa-play-circle"></i> ویدیوی تایم‌لپس حرکت ردیاب
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== سوالات متداول (FAQ) ========== -->
+    <section id="faq" style="background:#f1f3f5;">
+        <div class="container">
+            <h2 class="section-title">سوالات <span>متداول</span></h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 این ردیاب خورشیدی چه مزیتی نسبت به پنل ثابت دارد؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        ردیاب دو محوره با دنبال کردن خورشید در طول روز، پنل را همواره عمود بر تابش قرار می‌دهد. این کار باعث افزایش تا ۳۰ درصدی بازدهی نسبت به پنل ثابت می‌شود، به‌ویژه در ساعات ابتدایی و انتهایی روز.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 آیا این سیستم در هوای ابری هم کار می‌کند؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        بله، سنسورهای LDR حتی در نور پراکنده ابری نیز اختلاف نور را تشخیص می‌دهند و پنل را به سمت بیشترین میزان نور تنظیم می‌کنند. البته بازدهی کلی در روز ابری کمتر از روز آفتابی است، اما همچنان بهتر از پنل ثابت عمل می‌کند.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 مصرف برق خود ردیاب چقدر است؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        مصرف ردیاب بسیار ناچیز است. آردوینو و سنسورها حدود ۵۰ میلی‌آمپر و موتورها تنها هنگام حرکت جریان می‌کشند. در شب نیز سیستم به حالت خواب می‌رود تا مصرف به حداقل برسد.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 آیا نصب و راه‌اندازی این سیستم سخت است؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        خیر، این پروژه به‌گونه‌ای طراحی شده که با قطعات در دسترس و چاپ سه‌بعدی ساخته می‌شود. کد آردوینو نیز آماده است و با راهنمای گام‌به‌گام، هر فرد با دانش پایه الکترونیک می‌تواند آن را بسازد.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 هزینه ساخت این ردیاب چقدر است؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        هزینه کل با احتساب قطعات الکترونیک، موتورها و چاپ سه‌بعدی حدود ۴ میلیون تومان برآورد شده است. این مبلغ نسبت به افزایش بازدهی که ایجاد می‌کند، بسیار مقرون‌به‌صرفه است.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>🔹 آیا می‌توان از این طرح برای پنل‌های بزرگتر هم استفاده کرد؟</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        طرح فعلی برای پنل‌های کوچک (۵ ولت، ۲ وات) طراحی شده، اما با تغییر ابعاد سازه و استفاده از موتورهای قوی‌تر، می‌توان آن را برای پنل‌های بزرگتر نیز مقیاس‌پذیر کرد.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== فوتر ========== -->
+    <footer>
+        <div class="container">
+            <p>تیم ردیاب خورشیدی - سمینار ۱۴۰۵</p>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 4px;">
+                در صورت داشتن هر گونه سوال، پیام دهید به :
+                <br>
+                <a href="mailto:danialimanpour1390@gmail.com" style="color: #fff; text-decoration: none; border-bottom: 1px solid rgba(255,255,255,0.3);">
+                    danialimanpour1390@gmail.com
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========== دکمه بازگشت به بالا ========== -->
+    <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ========== جاوااسکریپت ========== -->
+    <script>
+        // ===== منو همبرگری =====
+        const toggle = document.getElementById('navToggle');
+        const links = document.getElementById('navLinks');
+
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+        });
+
+        links.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                links.classList.remove('open');
+            });
+        });
+
+        // ===== اسلایدر خودکار =====
+        const track = document.getElementById('sliderTrack');
+        const slides = track.querySelectorAll('.slider-slide');
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+        let autoSlideInterval;
+
+        // ایجاد دکمه‌های نقطه‌ای (dots)
+        const dotsContainer = document.getElementById('sliderDots');
+        slides.forEach((_, i) => {
+            const dot = document.createElement('button');
+            dot.classList.add('slider-dot');
+            if (i === 0) dot.classList.add('active');
+            dot.dataset.index = i;
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+
+        function goToSlide(index) {
+            currentIndex = index;
+            track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            dots.forEach(d => d.classList.remove('active'));
+            dots[currentIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide((currentIndex + 1) % totalSlides);
+        }
+
+        function prevSlide() {
+            goToSlide((currentIndex - 1 + totalSlides) % totalSlides);
+        }
+
+        // دکمه‌های قبلی و بعدی
+        document.getElementById('prevBtn').addEventListener('click', () => {
+            prevSlide();
+            resetAutoSlide();
+        });
+
+        document.getElementById('nextBtn').addEventListener('click', () => {
+            nextSlide();
+            resetAutoSlide();
+        });
+
+        // اسلاید خودکار هر ۴ ثانیه
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(nextSlide, 2000);
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        startAutoSlide();
+
+        // توقف خودکار وقتی موس روی اسلایدر برود
+        const sliderContainer = document.querySelector('.slider-container');
+        sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+        sliderContainer.addEventListener('mouseleave', startAutoSlide);
+
+        // ===== FAQ کشویی =====
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isOpen = item.classList.contains('open');
+
+                // بستن بقیه (اختیاری: فقط یکی باز بمونه)
+                document.querySelectorAll('.faq-item').forEach(other => {
+                    if (other !== item) other.classList.remove('open');
+                });
+
+                item.classList.toggle('open');
+            });
+        });
+
+        // ===== دکمه بازگشت به بالا =====
+        const backToTop = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ===== تغییر شفافیت نوار ناوبری هنگام اسکرول =====
+        const navbar = document.getElementById('navbar');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 80) {
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
+            } else {
+                navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
+            }
+        });
+    </script>
+
+</body>
+</html>
