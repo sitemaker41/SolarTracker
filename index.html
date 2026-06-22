@@ -584,6 +584,24 @@
             transform: translateY(-4px);
         }
 
+        /* ========== انیمیشن اسکرول (Fade-in) ========== */
+        .fade-section {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-section.delay-1 { transition-delay: 0.1s; }
+        .fade-section.delay-2 { transition-delay: 0.2s; }
+        .fade-section.delay-3 { transition-delay: 0.3s; }
+        .fade-section.delay-4 { transition-delay: 0.4s; }
+        .fade-section.delay-5 { transition-delay: 0.5s; }
+
         /* ========== واکنش‌گرا (موبایل و تبلت) ========== */
         @media (max-width: 992px) {
             .about-grid {
@@ -939,29 +957,29 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">درباره <span>پروژه</span></h2>
-            <div class="about-grid">
+            <div class="about-grid fade-section">
                 <div class="about-text">
                     <p>در این پروژه، یک سامانه ردیاب خورشیدی دو محوره با هدف افزایش راندمان جذب انرژی خورشیدی طراحی و ساخته شده است. برخلاف سیستم‌های تک‌محوره که تنها در یک راستا حرکت می‌کنند، ردیاب دو محوره قادر است با پیگیری دقیق موقعیت خورشید در هر دو جهت عمودی و افقی، پنل را در هر لحظه دقیقاً عمود بر پرتوهای تابشی قرار دهد.</p>
                     <p>سیستم با استفاده از ۴ سنسور LDR، موقعیت خورشید را در دو محور آزیموت (شرق-غرب) و ارتفاع (شمال-جنوب) تشخیص داده و با کمک دو موتور سروو (MG995 و SG90)، پنل را همواره عمود بر تابش خورشید قرار می‌دهد. سازه اصلی با استفاده از چاپ سه‌بعدی و جنس PLA+ ساخته شده است.</p>
                     <p style="font-weight: 600; color: #0D47A1;">افزایش بازدهی تا ۳۰ درصد نسبت به پنل ثابت، دقت ردیابی بهتر از ۱ درجه، عملکرد در شرایط نوری مختلف و قابلیت استفاده در هر نقطه بدون نیاز به کالیبراسیون مجدد از دستاوردهای این پروژه است.</p>
                 </div>
                 <div class="about-stats">
-                    <div class="stat-card">
+                    <div class="stat-card fade-section delay-1">
                         <i class="fas fa-sun"></i>
                         <h3>۳۰٪</h3>
                         <p>افزایش بازدهی</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card fade-section delay-2">
                         <i class="fas fa-arrows-alt"></i>
                         <h3>دو محور</h3>
                         <p>آزیموت و ارتفاع</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card fade-section delay-3">
                         <i class="fas fa-microchip"></i>
                         <h3>۴ LDR</h3>
                         <p>سنسور نوری</p>
                     </div>
-                    <div class="stat-card">
+                    <div class="stat-card fade-section delay-4">
                         <i class="fas fa-cube"></i>
                         <h3>PLA+</h3>
                         <p>چاپ سه‌بعدی</p>
@@ -976,19 +994,19 @@
         <div class="container">
             <h2 class="section-title">اعضای <span>تیم</span></h2>
             <div class="team-grid">
-                <div class="team-card">
+                <div class="team-card fade-section delay-1">
                     <div class="avatar">
                         <img src="images/team-1.jpg" alt="محمدصالح عرشی‌زاده" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
                     <h4>محمدصالح عرشی‌زاده</h4>
                 </div>
-                <div class="team-card">
+                <div class="team-card fade-section delay-2">
                     <div class="avatar">
                         <img src="images/team-2.jpg" alt="دانیال ایمان‌پور" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
                     <h4>دانیال ایمان‌پور</h4>
                 </div>
-                <div class="team-card">
+                <div class="team-card fade-section delay-3">
                     <div class="avatar">
                         <img src="images/team-3.jpg" alt="پارسا اعظمی" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
@@ -1003,22 +1021,22 @@
         <div class="container">
             <h2 class="section-title">دستاوردهای <span>پروژه</span></h2>
             <div class="features-grid">
-                <div class="feature-card">
+                <div class="feature-card fade-section delay-1">
                     <i class="fas fa-bullseye"></i>
                     <h4>دقت بالا</h4>
                     <p>دقت ردیابی بهتر از ۱ درجه</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-section delay-2">
                     <i class="fas fa-chart-line"></i>
                     <h4>افزایش بازدهی</h4>
                     <p>تا ۳۰٪ بیشتر از پنل ثابت</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-section delay-3">
                     <i class="fas fa-cloud-sun"></i>
                     <h4>عملکرد در ابری</h4>
                     <p>کارکرد در شرایط نوری مختلف</p>
                 </div>
-                <div class="feature-card">
+                <div class="feature-card fade-section delay-4">
                     <i class="fas fa-globe-asia"></i>
                     <h4>قابل حمل</h4>
                     <p>قابل استفاده در هر نقطه بدون کالیبراسیون</p>
@@ -1031,7 +1049,7 @@
     <section id="gallery" style="background:#f1f3f5;">
         <div class="container">
             <h2 class="section-title">گالری <span>تصاویر</span></h2>
-            <div class="slider-container">
+            <div class="slider-container fade-section">
                 <div class="slider-track" id="sliderTrack">
                     <div class="slider-slide" style="background-image:url('images/gallery-1.jpg');">
                         <span class="slide-label">🔧 چاپ قطعات</span>
@@ -1063,7 +1081,7 @@
     <section id="video">
         <div class="container">
             <h2 class="section-title">ویدیوی <span>تایم‌لپس</span></h2>
-            <div class="video-wrapper">
+            <div class="video-wrapper fade-section">
                 <div class="video-placeholder">
                     <i class="fas fa-play-circle"></i> ویدیوی تایم‌لپس حرکت ردیاب
                 </div>
@@ -1076,7 +1094,7 @@
         <div class="container">
             <h2 class="section-title">سوالات <span>متداول</span></h2>
             <div class="faq-container">
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-1">
                     <button class="faq-question">
                         <span>🔹 این ردیاب خورشیدی چه مزیتی نسبت به پنل ثابت دارد؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1085,7 +1103,7 @@
                         ردیاب دو محوره با دنبال کردن خورشید در طول روز، پنل را همواره عمود بر تابش قرار می‌دهد. این کار باعث افزایش تا ۳۰ درصدی بازدهی نسبت به پنل ثابت می‌شود، به‌ویژه در ساعات ابتدایی و انتهایی روز.
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-2">
                     <button class="faq-question">
                         <span>🔹 آیا این سیستم در هوای ابری هم کار می‌کند؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1094,7 +1112,7 @@
                         بله، سنسورهای LDR حتی در نور پراکنده ابری نیز اختلاف نور را تشخیص می‌دهند و پنل را به سمت بیشترین میزان نور تنظیم می‌کنند. البته بازدهی کلی در روز ابری کمتر از روز آفتابی است، اما همچنان بهتر از پنل ثابت عمل می‌کند.
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-3">
                     <button class="faq-question">
                         <span>🔹 مصرف برق خود ردیاب چقدر است؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1103,7 +1121,7 @@
                         مصرف ردیاب بسیار ناچیز است. آردوینو و سنسورها حدود ۵۰ میلی‌آمپر و موتورها تنها هنگام حرکت جریان می‌کشند. در شب نیز سیستم به حالت خواب می‌رود تا مصرف به حداقل برسد.
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-4">
                     <button class="faq-question">
                         <span>🔹 آیا نصب و راه‌اندازی این سیستم سخت است؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1112,7 +1130,7 @@
                         خیر، این پروژه به‌گونه‌ای طراحی شده که با قطعات در دسترس و چاپ سه‌بعدی ساخته می‌شود. کد آردوینو نیز آماده است و با راهنمای گام‌به‌گام، هر فرد با دانش پایه الکترونیک می‌تواند آن را بسازد.
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-5">
                     <button class="faq-question">
                         <span>🔹 هزینه ساخت این ردیاب چقدر است؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1121,7 +1139,7 @@
                         هزینه کل با احتساب قطعات الکترونیک، موتورها و چاپ سه‌بعدی حدود ۴ میلیون تومان برآورد شده است. این مبلغ نسبت به افزایش بازدهی که ایجاد می‌کند، بسیار مقرون‌به‌صرفه است.
                     </div>
                 </div>
-                <div class="faq-item">
+                <div class="faq-item fade-section delay-5">
                     <button class="faq-question">
                         <span>🔹 آیا می‌توان از این طرح برای پنل‌های بزرگتر هم استفاده کرد؟</span>
                         <i class="fas fa-chevron-down"></i>
@@ -1271,6 +1289,24 @@
             } else {
                 navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
             }
+        });
+
+        // ===== انیمیشن اسکرول (Fade-in) =====
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -30px 0px'
+            });
+
+            fadeElements.forEach(el => observer.observe(el));
         });
     </script>
 
