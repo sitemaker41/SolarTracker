@@ -166,6 +166,20 @@
             color: #fff;
         }
 
+        #solar-chart{
+            width:95%;
+            max-width:1000px;
+            margin:50px auto;
+            padding:20px;
+            text-align:center;
+        }
+
+        .chart-note{
+            margin-top:15px;
+            font-size:14px;
+            opacity:0.8;
+        }
+
         /* ========== بخش‌های عمومی ========== */
         section {
             padding: 80px 0;
@@ -512,6 +526,39 @@
         .faq-item.open .faq-answer {
             max-height: 500px;
             padding: 0 24px 20px;
+        }
+
+        #performance-comparison{
+            margin:50px auto;
+            padding:25px;
+            width:95%;
+            max-width:1100px;
+            text-align:center;
+        }
+
+        .comparison-description{
+            line-height:1.8;
+            margin-bottom:25px;
+        }
+
+        .comparison-table{
+            overflow-x:auto;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+        }
+
+        th,td{
+            padding:12px;
+            border:1px solid rgba(255,255,255,0.2);
+        }
+
+        .result-box{
+            margin-top:25px;
+            padding:20px;
+            border-radius:15px;
         }
 
         /* ========== ویدیو ========== */
@@ -944,6 +991,7 @@
     </style>
 </head>
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <!-- ========== نوار ناوبری ========== -->
     <nav class="navbar" id="navbar">
@@ -1031,28 +1079,68 @@
         </div>
     </section>
 
-    <!-- ========== تیم ========== -->
+<!-- ========== تیم ========== -->
     <section id="team" style="background:#f1f3f5;">
         <div class="container">
             <h2 class="section-title">اعضای <span>تیم</span></h2>
             <div class="team-grid">
+                <!-- محمدصالح عرشی‌زاده -->
                 <div class="team-card fade-section delay-1">
                     <div class="avatar">
                         <img src="images/team-1.jpg" alt="محمدصالح عرشی‌زاده" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
                     <h4>محمدصالح عرشی‌زاده</h4>
+                    <p class="role" style="font-size: 0.8rem; color: #495057; margin: 8px 0 0; line-height: 1.8; text-align: right;">
+                        تحقیق و پژوهش
+                        <br>طرح اولیه روی کاغذ
+                        <br>بستن مدار
+                        <br>جلوه بصری
+                        <br>طراحی الگوریتم‌های پیشنهادی
+                        <br>انتخاب الگوریتم برتر
+                        <br>کدنویسی
+                        <br>اصلاح اولیه کد
+                        <br>تست ۱، ۲، ۳
+                        <br>تست نهایی
+                    </p>
                 </div>
+
+                <!-- دانیال ایمان‌پور -->
                 <div class="team-card fade-section delay-2">
                     <div class="avatar">
                         <img src="images/team-2.jpg" alt="دانیال ایمان‌پور" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
                     <h4>دانیال ایمان‌پور</h4>
+                    <p class="role" style="font-size: 0.8rem; color: #495057; margin: 8px 0 0; line-height: 1.8; text-align: right;">
+                        تحقیق و پژوهش
+                        <br>طرح اولیه روی کاغذ
+                        <br>ساخت قطعات (با کمک پرینتر سه‌بعدی)
+                        <br>خرید لوازم موردنیاز
+                        <br>طراحی الگوریتم‌های پیشنهادی
+                        <br>انتخاب الگوریتم برتر
+                        <br>کدنویسی
+                        <br>اصلاح اولیه کد
+                        <br>تست ۱، ۲، ۳
+                        <br>تست نهایی
+                    </p>
                 </div>
+
+                <!-- پارسا اعظمی -->
                 <div class="team-card fade-section delay-3">
                     <div class="avatar">
                         <img src="images/team-3.jpg" alt="پارسا اعظمی" onerror="this.style.display='none'; this.parentElement.innerHTML='<i class=\'fas fa-user\'></i>';">
                     </div>
                     <h4>پارسا اعظمی</h4>
+                    <p class="role" style="font-size: 0.8rem; color: #495057; margin: 8px 0 0; line-height: 1.8; text-align: right;">
+                        تحقیق و پژوهش
+                        <br>ساخت قطعات (با کمک پرینتر سه‌بعدی)
+                        <br>خرید لوازم موردنیاز
+                        <br>بستن مدار
+                        <br>انتخاب الگوریتم برتر
+                        <br>کدنویسی
+                        <br>اصلاح اولیه کد
+                        <br>تست ۱، ۲، ۳
+                        <br>تست نهایی
+                    </p>
                 </div>
             </div>
         </div>
@@ -1095,7 +1183,8 @@
         </div>
     </section>
 
-    <!-- ========== گالری با اسلایدر ========== -->
+    
+        <!-- ========== گالری با اسلایدر ========== -->
     <section id="gallery" style="background:#f1f3f5;">
         <div class="container">
             <h2 class="section-title">گالری <span>تصاویر ‌  ‌  ‌  ‌ (به‌زودی)</span></h2>
@@ -1200,6 +1289,63 @@
                     <div class="faq-answer">
                         طرح فعلی برای پنل‌های کوچک (۵ ولت، ۲ وات) طراحی شده، اما با تغییر ابعاد سازه و استفاده از موتورهای قوی‌تر، می‌توان آن را برای پنل‌های بزرگتر نیز مقیاس‌پذیر کرد.
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== منابع و مراجع ========== -->
+    <section id="references" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">منابع و <span>مراجع</span></h2>
+            <div style="max-width: 850px; margin: 0 auto; background: #fff; border-radius: 20px; padding: 30px 35px; box-shadow: 0 4px 20px rgba(0,0,0,0.06);">
+                <p style="font-size: 0.95rem; color: #495057; margin-bottom: 24px; text-align: justify; border-bottom: 2px solid #f1f3f5; padding-bottom: 16px;">
+                    📄 پروژه حاضر بر اساس مطالعات و مقالات علمی معتبر در حوزه انرژی‌های تجدیدپذیر و سیستم‌های ردیاب خورشیدی طراحی و پیاده‌سازی شده است:
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    <!-- منبع ۱ -->
+                    <div style="border-right: 4px solid #1A73E8; padding-right: 16px;">
+                        <div style="font-weight: 600; color: #0D47A1; font-size: 0.95rem;">Dual-Axis Solar Tracking System for Enhanced Photovoltaic Efficiency in Tropical Climates</div>
+                        <div style="font-size: 0.85rem; color: #495057;">Jorge Manuel Barrios-Sánchez, Ernesto Isaac Tlapanco-Ríos</div>
+                        <div style="font-size: 0.8rem; color: #6c757d;">Sustainability, MDPI, Vol. 17, 2025</div>
+                        <div style="font-size: 0.8rem; color: #1A73E8; margin-top: 4px;">DOI: 10.3390/su17031117</div>
+                    </div>
+                    
+                    <!-- منبع ۲ -->
+                    <div style="border-right: 4px solid #FF6B00; padding-right: 16px;">
+                        <div style="font-weight: 600; color: #0D47A1; font-size: 0.95rem;">Solar Tracker System Based on a Digital Heuristic Controller</div>
+                        <div style="font-size: 0.85rem; color: #495057;">D. Kang, E. A. Martínez, E. Chaparro</div>
+                        <div style="font-size: 0.8rem; color: #6c757d;">IEEE Trondheim PowerTech, 2011</div>
+                        <div style="font-size: 0.8rem; color: #1A73E8; margin-top: 4px;">DOI: 10.1109/PTC.2011.6019380</div>
+                    </div>
+                    
+                    <!-- منبع ۳ -->
+                    <div style="border-right: 4px solid #00C853; padding-right: 16px;">
+                        <div style="font-weight: 600; color: #0D47A1; font-size: 0.95rem;">Performance Comparison Between Fixed Panel, Single-axis and Dual-axis Sun Tracking Solar Panel System</div>
+                        <div style="font-size: 0.85rem; color: #495057;">Department of Electrical and Electronic Engineering, BRAC University</div>
+                        <div style="font-size: 0.8rem; color: #6c757d;">BRAC University, Dhaka, Bangladesh</div>
+                        <div style="font-size: 0.8rem; color: #1A73E8; margin-top: 4px;">دانشگاه BRAC، ۲۰۲۰</div>
+                    </div>
+                    
+                    <!-- منبع ۴ -->
+                    <div style="border-right: 4px solid #9C27B0; padding-right: 16px;">
+                        <div style="font-weight: 600; color: #0D47A1; font-size: 0.95rem;">Automatic Dual Axis Sun Tracking System using LDR Sensor</div>
+                        <div style="font-size: 0.85rem; color: #495057;">Dept. of EIE, RGMCET Nandyal & Dept. of ECE, Ace Engineering College, Hyderabad</div>
+                        <div style="font-size: 0.8rem; color: #6c757d;">هند، ۲۰۱۹</div>
+                    </div>
+                    
+                    <!-- منبع ۵ -->
+                    <div style="border-right: 4px solid #E91E63; padding-right: 16px;">
+                        <div style="font-weight: 600; color: #0D47A1; font-size: 0.95rem;">Dual axis solar tracker with IoT monitoring system using Arduino</div>
+                        <div style="font-size: 0.85rem; color: #495057;">Green and Sustainable Energy Focus Group, Universiti Tun Hussein Onn Malaysia (UTHM)</div>
+                        <div style="font-size: 0.8rem; color: #6c757d;">مالزی، ۲۰۲۲</div>
+                    </div>
+                    
+                </div>
+                
+                <div style="margin-top: 24px; padding-top: 16px; border-top: 2px solid #f1f3f5; font-size: 0.85rem; color: #6c757d; text-align: center;">
+                    تمامی منابع فوق در فرآیند طراحی، شبیه‌سازی و ساخت این پروژه مورد استفاده قرار گرفته‌اند.
                 </div>
             </div>
         </div>
@@ -1368,7 +1514,7 @@
 
             fadeElements.forEach(el => observer.observe(el));
         });
-    </script>
 
+    </script>
 </body>
 </html>
