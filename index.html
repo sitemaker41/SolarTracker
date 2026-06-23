@@ -225,6 +225,83 @@
             font-size: 0.9rem;
             color: #6c757d;
         }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+            animation: fadeInModal 0.3s ease;
+        }
+        .modal-content {
+            background: #fff;
+            margin: 5% auto;
+            padding: 30px 35px 35px;
+            border-radius: 24px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            position: relative;
+            direction: rtl;
+            text-align: right;
+        }
+        @keyframes fadeInModal {
+            from { opacity: 0; transform: scale(0.95) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .close-modal {
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            font-size: 2rem;
+            font-weight: 300;
+            color: #aaa;
+            cursor: pointer;
+            transition: color 0.2s;
+            line-height: 1;
+        }
+        .close-modal:hover {
+            color: #1A73E8;
+        }
+        .modal-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0D47A1;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #1A73E8;
+            display: inline-block;
+        }
+        .modal-body p {
+            font-size: 1rem;
+            line-height: 1.9;
+            color: #495057;
+            margin-bottom: 16px;
+        }
+        .modal-body p strong {
+            color: #0D47A1;
+            font-size: 1.05rem;
+        }
+        .modal-body p:last-child {
+            margin-bottom: 0;
+        }
+        .modal-content::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f3f5;
+            border-radius: 4px;
+        }
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #1A73E8;
+            border-radius: 4px;
+        }
         .team-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -995,25 +1072,37 @@
         <div class="container">
             <h2 class="section-title">دستاوردهای <span>پروژه</span></h2>
             <div class="features-grid">
-                <div class="feature-card fade-section delay-1">
+                <div class="feature-card fade-section delay-1" onclick="openModal('modal1')">
                     <i class="fas fa-bullseye"></i>
                     <h4>دقت بالا</h4>
                     <p>دقت ردیابی بهتر از ۱ درجه</p>
+                    <span style="display: block; margin-top: 12px; font-size: 0.75rem; color: #013880; opacity: 0.7; transition: opacity 0.3s;">
+                        برای جزئیات بیشتر این مورد کلیک کنید
+                    </span>
                 </div>
-                <div class="feature-card fade-section delay-2">
+                <div class="feature-card fade-section delay-2" onclick="openModal('modal2')">
                     <i class="fas fa-chart-line"></i>
                     <h4>افزایش بازدهی</h4>
-                    <p>۳۰ تا ۴۰% بیشتر از پنل‌ثابت</p>
+                    <p>۳۰ تا ۴۰ درصد بیشتر از پنل ثابت</p>
+                    <span style="display: block; margin-top: 12px; font-size: 0.75rem; color: #013880; opacity: 0.7; transition: opacity 0.3s;">
+                        برای جزئیات بیشتر این مورد کلیک کنید
+                    </span>
                 </div>
-                <div class="feature-card fade-section delay-3">
+                <div class="feature-card fade-section delay-3" onclick="openModal('modal3')">
                     <i class="fas fa-cloud-sun"></i>
                     <h4>عملکرد در هوای ابری</h4>
                     <p>کارکرد در شرایط نوری مختلف</p>
+                    <span style="display: block; margin-top: 12px; font-size: 0.75rem; color: #013880; opacity: 0.7; transition: opacity 0.3s;">
+                        برای جزئیات بیشتر این مورد کلیک کنید
+                    </span>
                 </div>
-                <div class="feature-card fade-section delay-4">
+                <div class="feature-card fade-section delay-4" onclick="openModal('modal4')">
                     <i class="fas fa-globe-asia"></i>
                     <h4>قابل حمل</h4>
                     <p>قابل استفاده در هر نقطه بدون کالیبراسیون</p>
+                    <span style="display: block; margin-top: 12px; font-size: 0.75rem; color: #013880; opacity: 0.7; transition: opacity 0.3s;">
+                        برای جزئیات بیشتر این مورد کلیک کنید
+                    </span>
                 </div>
             </div>
         </div>
@@ -1030,6 +1119,62 @@
             </p>
         </div>
     </section>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal1')">&times;</span>
+            <h3 class="modal-title">🎯 دقت بالا</h3>
+            <div class="modal-body">
+                <p><strong>چرا این دستاورد خوب است؟</strong></p>
+                <p>دقت بالای ردیابی به معنای جذب حداکثری انرژی خورشیدی در تمام ساعات روز است. هر چه پنل دقیق‌تر عمود بر تابش خورشید قرار گیرد، انرژی بیشتری جذب می‌کند.</p>
+                <p><strong>چطور این سود را دارد؟</strong></p>
+                <p>با کاهش زاویه انحراف از حالت عمود (که به آن Cosine Loss گفته می‌شود)، بازدهی پنل به حداکثر ممکن خود نزدیک می‌شود و هدررفت انرژی به حداقل می‌رسد.</p>
+                <p><strong>چطور می‌توان پیشرفته‌ترش کرد؟</strong></p>
+                <p>استفاده از الگوریتم‌های پیش‌بینی‌کننده (مثل ترکیب سنسور LDR با الگوریتم نجومی) یا استفاده از انکودرهای دقیق‌تر روی موتورها، می‌تواند دقت را به ۰.۱ درجه نیز برساند.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal2')">&times;</span>
+            <h3 class="modal-title">📈 افزایش بازدهی</h3>
+            <div class="modal-body">
+                <p><strong>چرا این دستاورد خوب است؟</strong></p>
+                <p>افزایش ۳۰ تا ۴۰ درصدی بازدهی به معنای تولید برق بیشتر با همان تعداد پنل خورشیدی است که هزینه‌های سرمایه‌گذاری را به شدت کاهش می‌دهد.</p>
+                <p><strong>چطور این سود را دارد؟</strong></p>
+                <p>با ردیابی خورشید در طول روز، پنل همواره در بهترین زاویه ممکن قرار می‌گیرد و از تابش مستقیم خورشید در ساعات اوج (ظهر) و همچنین تابش مایل (صبح و عصر) حداکثر استفاده را می‌برد.</p>
+                <p><strong>چطور می‌توان پیشرفته‌ترش کرد؟</strong></p>
+                <p>ترکیب این ردیاب با سیستم‌های MPPT (ردیابی حداکثر توان) و استفاده از پنل‌های دوطرفه (Bifacial) می‌تواند بازدهی را تا مرز ۵۰ درصد نیز افزایش دهد.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal3')">&times;</span>
+            <h3 class="modal-title">⛅ عملکرد در هوای ابری</h3>
+            <div class="modal-body">
+                <p><strong>چرا این دستاورد خوب است؟</strong></p>
+                <p>بسیاری از ردیاب‌های ساده در هوای ابری یا غبارآلود عملکرد خود را از دست می‌دهند. این سیستم با استفاده از سنسورهای حساس LDR، حتی در نور پراکنده نیز بهترین جهت را تشخیص می‌دهد.</p>
+                <p><strong>چطور این سود را دارد؟</strong></p>
+                <p>در روزهای ابری که نور خورشید به صورت پراکنده از همه جهات می‌تابد، سنسورها با مقایسه شدت نور در چهار جهت، جهت با بیشترین شدت نور را پیدا کرده و پنل را به سمت آن می‌چرخانند.</p>
+                <p><strong>چطور می‌توان پیشرفته‌ترش کرد؟</strong></p>
+                <p>می‌توان از یک سنسور نور محیط (Ambient Light Sensor) به عنوان مرجع استفاده کرد تا در روزهای کاملاً ابری، پنل به حالت «بهینه‌ترین زاویه ممکن» برود و از چرخش‌های بیهوده جلوگیری کند.</p>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal4')">&times;</span>
+            <h3 class="modal-title">🌍 قابل حمل</h3>
+            <div class="modal-body">
+                <p><strong>چرا این دستاورد خوب است؟</strong></p>
+                <p>سیستم‌های ردیاب معمولاً نیاز به تنظیمات اولیه (کالیبراسیون) بر اساس موقعیت جغرافیایی دارند. این سیستم با استفاده از روش حلقه بسته (سنسوری)، این نیاز را حذف کرده است.</p>
+                <p><strong>چطور این سود را دارد؟</strong></p>
+                <p>چون سیستم بر اساس اختلاف نور بین سنسورها کار می‌کند، فارغ از اینکه در کدام نقطه از جهان نصب شود، به‌طور خودکار خورشید را پیدا کرده و دنبال می‌کند.</p>
+                <p><strong>چطور می‌توان پیشرفته‌ترش کرد؟</strong></p>
+                <p>اضافه کردن یک ماژول GPS به سیستم، علاوه بر سنسورها، می‌تواند با استفاده از الگوریتم‌های نجومی، دقت ردیابی را در شرایط نوری نامطمئن (مثل گرد و غبار شدید) افزایش دهد.</p>
+            </div>
+        </div>
+    </div>
     <section id="gallery" style="background:#f1f3f5;">
         <div class="container">
             <h2 class="section-title">گالری <span>تصاویر ‌(به‌زودی)</span></h2>
@@ -1317,6 +1462,30 @@
         }
         window.addEventListener('scroll', updateReadingProgress);
         window.addEventListener('load', updateReadingProgress);
+        function openModal(id) {
+            document.getElementById(id).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal').forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
     </script>
 </body>
 </html>
