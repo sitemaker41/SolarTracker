@@ -482,9 +482,11 @@
             transform: scale(1.2);
         }
         /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
+        /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
         .chat-btn-glow {
             background: linear-gradient(135deg, #1A73E8, #0D47A1);
-            animation: colorCycle 6s ease-in-out infinite;
+            animation: colorCycle 3s ease-in-out infinite;
+            box-shadow: 0 4px 14px rgba(26,115,232,0.3);
         }
 
         @keyframes colorCycle {
@@ -492,17 +494,33 @@
                 background: linear-gradient(135deg, #1A73E8, #0D47A1);
                 box-shadow: 0 4px 14px rgba(26,115,232,0.3);
             }
+            12.5% {
+                background: linear-gradient(135deg, #2E7EB8, #1A5A9C);
+                box-shadow: 0 4px 16px rgba(46,126,184,0.35);
+            }
             25% {
                 background: linear-gradient(135deg, #FFD700, #FFA000);
                 box-shadow: 0 4px 20px rgba(255,215,0,0.5);
             }
+            37.5% {
+                background: linear-gradient(135deg, #FFC107, #FF8F00);
+                box-shadow: 0 4px 25px rgba(255,193,7,0.6);
+            }
             50% {
+                background: linear-gradient(135deg, #FFB300, #FF6F00);
+                box-shadow: 0 4px 28px rgba(255,179,0,0.7);
+            }
+            62.5% {
                 background: linear-gradient(135deg, #FFC107, #FF8F00);
                 box-shadow: 0 4px 25px rgba(255,193,7,0.6);
             }
             75% {
                 background: linear-gradient(135deg, #FFD700, #FFA000);
                 box-shadow: 0 4px 20px rgba(255,215,0,0.5);
+            }
+            87.5% {
+                background: linear-gradient(135deg, #2E7EB8, #1A5A9C);
+                box-shadow: 0 4px 16px rgba(46,126,184,0.35);
             }
             100% {
                 background: linear-gradient(135deg, #1A73E8, #0D47A1);
@@ -988,19 +1006,16 @@
     <nav class="navbar" id="navbar">
         <div class="container">
             <a href="#home" class="logo">Solar<span>Tracker</span></a>
-            <button onclick="openChatModal()" class="chat-btn-glow" style="color: #fff; border: none; padding: 8px 20px; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all 0.3s; box-shadow: 0 4px 14px rgba(26,115,232,0.3); font-family: inherit;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255,193,7,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 14px rgba(26,115,232,0.3)';">
-                🤖 چت‌بات راهنما
-            </button>
             <button class="nav-toggle" id="navToggle" aria-label="منو">
                 <i class="fas fa-bars"></i>
             </button>
             <ul class="nav-links" id="navLinks">
-                <li><a href="#about">درباره</a></li>
-                <li><a href="#team">تیم</a></li>
-                <li><a href="#features">دستاوردها</a></li>
-                <li><a href="#comparison">مقایسه</a></li>
-                <li><a href="#gallery">گالری</a></li>
-                <li><a href="#faq">سوالات</a></li>
+                <li><a href="#about">درباره‌پروژه</a></li>
+                <li><a href="#team">اعضای‌تیم</a></li>
+                <li><a href="#features">دستاوردهای‌پروژه</a></li>
+                <li><a href="#comparison">مقایسه‌عملکرد</a></li>
+                <li><a href="#gallery">گالری‌تصاویر</a></li>
+                <li><a href="#faq">سوالات‌متداول</a></li>
             </ul>
         </div>
         <div style="position: relative; width: 100%; max-width: 1200px; margin: 4px auto 0; padding: 0 24px;">
@@ -1018,6 +1033,9 @@
             <p>افزایش بازدهی پنل‌های خورشیدی با ردیابی دقیق در دو محور با استفاده از ۴ سنسور LDR و آردوینو</p>
             <div class="hero-buttons">
                 <a href="#about" class="btn btn-primary">مشاهده پروژه</a>
+                <button onclick="openChatModal()" class="chat-btn-glow" style="color: #fff; border: none; padding: 12px 28px; border-radius: 40px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; font-family: inherit;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255,193,7,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 14px rgba(26,115,232,0.3)';">
+                    🤖 چت‌بات راهنما
+                </button>
             </div>
         </div>
     </section>
