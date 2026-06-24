@@ -482,7 +482,6 @@
             transform: scale(1.2);
         }
         /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
-        /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
         .chat-btn-glow {
             background: linear-gradient(135deg, #1A73E8, #0D47A1);
             animation: colorCycle 3s ease-in-out infinite;
@@ -526,64 +525,6 @@
                 background: linear-gradient(135deg, #1A73E8, #0D47A1);
                 box-shadow: 0 4px 14px rgba(26,115,232,0.3);
             }
-        }
-        .faq-container {
-            max-width: 750px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        .faq-item {
-            background: #fff;
-            border-radius: 16px;
-            border: 1px solid #e9ecef;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            transition: all 0.2s;
-        }
-        .faq-item:hover {
-            border-color: #1A73E8;
-        }
-        .faq-question {
-            width: 100%;
-            background: none;
-            border: none;
-            padding: 20px 24px;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: #0D47A1;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            text-align: right;
-            font-family: inherit;
-            transition: background 0.2s;
-        }
-        .faq-question:hover {
-            background: #f8f9fa;
-        }
-        .faq-question i {
-            font-size: 1.2rem;
-            color: #1A73E8;
-            transition: transform 0.3s;
-        }
-        .faq-item.open .faq-question i {
-            transform: rotate(180deg);
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.4s ease, padding 0.3s ease;
-            padding: 0 24px;
-            color: #495057;
-            font-size: 0.98rem;
-            line-height: 1.8;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 500px;
-            padding: 0 24px 20px;
         }
         .video-wrapper {
             max-width: 700px;
@@ -806,17 +747,6 @@
             .stat-card h3 {
                 font-size: 1.5rem;
             }
-            .faq-question {
-                padding: 16px 18px;
-                font-size: 0.95rem;
-            }
-            .faq-answer {
-                font-size: 0.9rem;
-                padding: 0 18px;
-            }
-            .faq-item.open .faq-answer {
-                padding: 0 18px 16px;
-            }
             .btn {
                 padding: 12px 28px;
                 font-size: 0.9rem;
@@ -921,13 +851,6 @@
             .hero-buttons {
                 gap: 10px;
             }
-            .faq-question {
-                font-size: 0.85rem;
-                padding: 14px 16px;
-            }
-            .faq-answer {
-                font-size: 0.85rem;
-            }
             .video-placeholder i {
                 font-size: 2rem;
             }
@@ -971,34 +894,6 @@
             .logo {
                 font-size: 1rem;
             }
-            /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
-            @keyframes colorCycle {
-                0% {
-                    background: linear-gradient(135deg, #1A73E8, #0D47A1);
-                    box-shadow: 0 4px 14px rgba(26,115,232,0.3);
-                }
-                25% {
-                    background: linear-gradient(135deg, #FFD700, #FFA000);
-                    box-shadow: 0 4px 20px rgba(255,215,0,0.5);
-                }
-                50% {
-                    background: linear-gradient(135deg, #FFC107, #FF8F00);
-                    box-shadow: 0 4px 25px rgba(255,193,7,0.6);
-                }
-                75% {
-                    background: linear-gradient(135deg, #FFD700, #FFA000);
-                    box-shadow: 0 4px 20px rgba(255,215,0,0.5);
-                }
-                100% {
-                    background: linear-gradient(135deg, #1A73E8, #0D47A1);
-                    box-shadow: 0 4px 14px rgba(26,115,232,0.3);
-                }
-            }
-
-            /* ========== استایل اختصاصی برای جلوگیری از تداخل ========== */
-            .chat-btn-glow {
-                animation: colorCycle 2s ease-in-out infinite !important;
-            }
         }
     </style>
 </head>
@@ -1015,7 +910,6 @@
                 <li><a href="#features">دستاوردهای‌پروژه</a></li>
                 <li><a href="#comparison">مقایسه‌عملکرد</a></li>
                 <li><a href="#gallery">گالری‌تصاویر</a></li>
-                <li><a href="#faq">سوالات‌متداول</a></li>
             </ul>
         </div>
         <div style="position: relative; width: 100%; max-width: 1200px; margin: 4px auto 0; padding: 0 24px;">
@@ -1245,37 +1139,6 @@
             </div>
         </div>
     </section>
-    <section id="faq" style="background:#f1f3f5;">
-        <div class="container">
-            <h2 class="section-title">سوالات <span>متداول</span></h2>
-            <div class="faq-container">
-                <div class="faq-item fade-section delay-1">
-                    <button class="faq-question"><span>🔹 این ردیاب خورشیدی چه مزیتی نسبت به پنل ثابت دارد؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">ردیاب دو محوره با دنبال کردن خورشید در طول روز، پنل را همواره عمود بر تابش قرار می‌دهد. این کار باعث افزایش ۳۰ تا ۴۰ درصدی بازدهی نسبت به پنل ثابت می‌شود، به‌ویژه در ساعات ابتدایی و انتهایی روز.</div>
-                </div>
-                <div class="faq-item fade-section delay-2">
-                    <button class="faq-question"><span>🔹 آیا این سیستم در هوای ابری هم کار می‌کند؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">بله، سنسورهای LDR حتی در نور پراکنده ابری نیز اختلاف نور را تشخیص می‌دهند و پنل را به سمت بیشترین میزان نور تنظیم می‌کنند. البته بازدهی کلی در روز ابری کمتر از روز آفتابی است، اما همچنان بهتر از پنل ثابت عمل می‌کند.</div>
-                </div>
-                <div class="faq-item fade-section delay-3">
-                    <button class="faq-question"><span>🔹 مصرف برق خود ردیاب چقدر است؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">مصرف ردیاب بسیار ناچیز است. آردوینو و سنسورها حدود ۵۰ میلی‌آمپر و موتورها تنها هنگام حرکت جریان می‌کشند. در شب نیز سیستم به حالت خواب می‌رود تا مصرف به حداقل برسد.</div>
-                </div>
-                <div class="faq-item fade-section delay-4">
-                    <button class="faq-question"><span>🔹 آیا نصب و راه‌اندازی این سیستم سخت است؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">خیر، این پروژه به‌گونه‌ای طراحی شده که با قطعات در دسترس و چاپ سه‌بعدی ساخته می‌شود. کد آردوینو نیز آماده است و با راهنمای گام‌به‌گام، هر فرد با دانش پایه الکترونیک می‌تواند آن را بسازد.</div>
-                </div>
-                <div class="faq-item fade-section delay-5">
-                    <button class="faq-question"><span>🔹 هزینه ساخت این ردیاب چقدر است؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">هزینه کل با احتساب قطعات الکترونیک، موتورها و چاپ سه‌بعدی حدود ۴ میلیون تومان برآورد شده است. این مبلغ نسبت به افزایش بازدهی که ایجاد می‌کند، بسیار مقرون‌به‌صرفه است.</div>
-                </div>
-                <div class="faq-item fade-section delay-5">
-                    <button class="faq-question"><span>🔹 آیا می‌توان از این طرح برای پنل‌های بزرگتر هم استفاده کرد؟</span><i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">طرح فعلی برای پنل‌های کوچک (۵ ولت، ۲ وات) طراحی شده، اما با تغییر ابعاد سازه و استفاده از موتورهای قوی‌تر، می‌توان آن را برای پنل‌های بزرگتر نیز مقیاس‌پذیر کرد.</div>
-                </div>
-            </div>
-        </div>
-    </section>
     <footer>
         <div class="container">
             <p>تیم ردیاب خورشیدی - سمینار ۱۴۰۵</p>
@@ -1290,25 +1153,79 @@
     </footer>
     <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا"><i class="fas fa-chevron-up"></i></button>
     
-    <!-- ===== مودال چت‌بات ===== -->
+    <!-- ===== مودال چت‌بات با لیست سوالات ===== -->
     <div id="chatModal" class="chat-modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(6px); animation: fadeInModal 0.3s ease;">
-        <div class="chat-modal-content" style="background: #fff; margin: 3% auto; padding: 0; border-radius: 28px; max-width: 650px; width: 92%; max-height: 90vh; box-shadow: 0 25px 80px rgba(0,0,0,0.4); position: relative; direction: rtl; text-align: right; overflow: hidden; display: flex; flex-direction: column;">
-            <div style="background: #0D47A1; padding: 18px 28px; display: flex; justify-content: space-between; align-items: center; color: #fff; flex-shrink: 0;">
-                <div style="display: flex; align-items: center; gap: 14px;">
-                    <span style="font-size: 2rem;">🤖</span>
-                    <div><div style="font-weight: 700; font-size: 1.2rem;">SolarBot 1.0</div><div style="font-size: 0.75rem; opacity: 0.8;">دستیار هوشمند انرژی خورشیدی</div></div>
+        <div class="chat-modal-content" style="background: #fff; margin: 2% auto; padding: 0; border-radius: 28px; max-width: 750px; width: 94%; max-height: 92vh; box-shadow: 0 25px 80px rgba(0,0,0,0.4); position: relative; direction: rtl; text-align: right; overflow: hidden; display: flex; flex-direction: column;">
+            
+            <!-- ===== هدر مودال ===== -->
+            <div style="background: #0D47A1; padding: 16px 24px; display: flex; justify-content: space-between; align-items: center; color: #fff; flex-shrink: 0; flex-wrap: wrap; gap: 10px;">
+                <div style="display: flex; align-items: center; gap: 12px;">
+                    <span style="font-size: 1.8rem;">🤖</span>
+                    <div>
+                        <div style="font-weight: 700; font-size: 1.1rem;">SolarBot 1.0</div>
+                        <div style="font-size: 0.7rem; opacity: 0.8;">دستیار هوشمند انرژی خورشیدی</div>
+                    </div>
                 </div>
-                <button onclick="closeChatModal()" style="background: rgba(255,255,255,0.15); border: none; color: #fff; width: 40px; height: 40px; border-radius: 50%; font-size: 1.8rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; line-height: 1;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">✕</button>
+                <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+                    <!-- ===== دکمه لیست سوالات ===== -->
+                    <button onclick="toggleQuestionList()" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #fff; padding: 6px 16px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; transition: all 0.3s; display: flex; align-items: center; gap: 6px;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+                        📋 لیست سوالات
+                    </button>
+                    <button onclick="closeChatModal()" style="background: rgba(255,255,255,0.15); border: none; color: #fff; width: 36px; height: 36px; border-radius: 50%; font-size: 1.5rem; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; line-height: 1;" onmouseover="this.style.background='rgba(255,255,255,0.3)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+                        ✕
+                    </button>
+                </div>
             </div>
-            <div id="chatModalMessages" style="flex: 1; min-height: 350px; max-height: 55vh; overflow-y: auto; padding: 20px 24px; background: #fafbfc; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth;"></div>
-            <form id="chatModalForm" style="display: flex; gap: 12px; padding: 16px 24px; border-top: 1px solid #e9ecef; background: #fff; flex-shrink: 0;">
-                <input id="chatModalInput" type="text" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 12px 18px; border: 2px solid #e9ecef; border-radius: 40px; font-size: 1rem; outline: none; transition: border-color 0.2s; font-family: inherit;" onfocus="this.style.borderColor='#1A73E8'" onblur="this.style.borderColor='#e9ecef'">
-                <button id="chatModalSendBtn" type="submit" style="padding: 12px 28px; background: #1A73E8; color: #fff; border: none; border-radius: 40px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: background 0.2s; white-space: nowrap;" onmouseover="this.style.background='#0D47A1'" onmouseout="this.style.background='#1A73E8'">📨 ارسال</button>
+
+            <!-- ===== لیست سوالات (کشویی) ===== -->
+            <div id="questionList" style="display: none; background: #f8f9fa; padding: 12px 16px; border-bottom: 1px solid #e9ecef; max-height: 200px; overflow-y: auto; flex-shrink: 0;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
+                    <button onclick="askQuestion('پروژه چطوری کار می‌کنه؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 پروژه چطوری کار می‌کنه؟
+                    </button>
+                    <button onclick="askQuestion('انرژی خورشیدی چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 انرژی خورشیدی چیست؟
+                    </button>
+                    <button onclick="askQuestion('پنل خورشیدی چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 پنل خورشیدی چیست؟
+                    </button>
+                    <button onclick="askQuestion('ردیاب دو محوره چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 ردیاب دو محوره چیست؟
+                    </button>
+                    <button onclick="askQuestion('سنسور LDR چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 سنسور LDR چیست؟
+                    </button>
+                    <button onclick="askQuestion('آردوینو چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 آردوینو چیست؟
+                    </button>
+                    <button onclick="askQuestion('بازدهی ردیاب چقدر است؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 بازدهی ردیاب چقدر است؟
+                    </button>
+                    <button onclick="askQuestion('هزینه ساخت ردیاب چقدر است؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 هزینه ساخت ردیاب چقدر است؟
+                    </button>
+                    <button onclick="askQuestion('تیم پروژه چه کسانی هستند؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 تیم پروژه چه کسانی هستند؟
+                    </button>
+                    <button onclick="askQuestion('قطعات پروژه چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
+                        🔹 قطعات پروژه چیست؟
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== فضای پیام‌ها ===== -->
+            <div id="chatModalMessages" style="flex: 1; min-height: 300px; max-height: 50vh; overflow-y: auto; padding: 20px 24px; background: #fafbfc; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth;"></div>
+
+            <!-- ===== فرم ورودی ===== -->
+            <form id="chatModalForm" style="display: flex; gap: 12px; padding: 14px 20px; border-top: 1px solid #e9ecef; background: #fff; flex-shrink: 0;">
+                <input id="chatModalInput" type="text" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 10px 16px; border: 2px solid #e9ecef; border-radius: 40px; font-size: 0.95rem; outline: none; transition: border-color 0.2s; font-family: inherit;" onfocus="this.style.borderColor='#1A73E8'" onblur="this.style.borderColor='#e9ecef'">
+                <button id="chatModalSendBtn" type="submit" style="padding: 10px 22px; background: #1A73E8; color: #fff; border: none; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; white-space: nowrap;" onmouseover="this.style.background='#0D47A1'" onmouseout="this.style.background='#1A73E8'">
+                    📨 ارسال
+                </button>
             </form>
         </div>
     </div>
 
-    <script src="solarbot-data.js"></script>
     <script>
         // ===== منو همبرگری =====
         const toggle = document.getElementById('navToggle');
@@ -1354,18 +1271,6 @@
         const sliderContainer = document.querySelector('.slider-container');
         sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
         sliderContainer.addEventListener('mouseleave', startAutoSlide);
-
-        // ===== FAQ =====
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const item = button.parentElement;
-                const isOpen = item.classList.contains('open');
-                document.querySelectorAll('.faq-item').forEach(other => {
-                    if (other !== item) other.classList.remove('open');
-                });
-                item.classList.toggle('open');
-            });
-        });
 
         // ===== بازگشت به بالا =====
         const backToTop = document.getElementById('backToTop');
@@ -1449,21 +1354,506 @@
             }
         });
 
-        // ===== چت‌بات =====
+        // ============================================================
+        // 🤖 مدیریت چت‌بات با لیست سوالات
+        // ============================================================
+        
+        // ===== دیتابیس سوالات و پاسخ‌ها =====
+        const qaDatabase = [
+    // ==========================================
+    // بخش ۱: پروژه و نحوه کار (۴ سوال)
+    // ==========================================
+    {
+        question: "پروژه چطوری کار می‌کنه؟",
+        answer: `🔆 پروژه ما یک ردیاب خورشیدی دو محوره است که با استفاده از ۴ سنسور LDR، آردوینو UNO و دو موتور سروو (MG995 و SG90) طراحی و ساخته شده است.
+
+مراحل کار پروژه:
+1️⃣ چهار سنسور LDR در چهار جهت اصلی (شرق، غرب، شمال، جنوب) نصب شده‌اند.
+2️⃣ سنسورها شدت نور را در هر جهت اندازه‌گیری می‌کنند.
+3️⃣ آردوینو داده‌ها را خوانده و مقایسه می‌کند.
+4️⃣ اگر نوری در جهتی بیشتر باشد، آردوینو به موتورها فرمان می‌دهد.
+5️⃣ موتورها پنل را به سمت بیشترین نور می‌چرخانند.
+6️⃣ این کار مدام تکرار می‌شود تا پنل همیشه عمود بر خورشید باشد.
+
+✅ نتیجه: افزایش بازدهی تا ۳۰ تا ۴۰ درصد نسبت به پنل ثابت`
+    },
+    {
+        question: "هدف از ساخت این پروژه چیست؟",
+        answer: `🎯 هدف اصلی این پروژه، نشان دادن کاربرد عملی انرژی خورشیدی و افزایش بازدهی پنل‌های خورشیدی با استفاده از ردیاب دو محوره است.
+
+اهداف فرعی:
+✅ آشنایی با مفاهیم انرژی‌های تجدیدپذیر
+✅ یادگیری کار با سنسورها و آردوینو
+✅ ساخت یک نمونه عملی و آموزشی
+✅ ارائه در سمینار علمی مدرسه حلی`
+    },
+    {
+        question: "چرا دو محوره؟ تک محوره کافی نیست؟",
+        answer: `🔆 ردیاب دو محوره نسبت به تک محوره مزایای زیادی دارد:
+
+مقایسه:
+| ویژگی | دو محوره | تک محوره |
+|:---|:---:|:---:|
+| افزایش بازدهی | ۳۰-۴۰٪ | ۲۰-۲۵٪ |
+| تنظیم فصلی | دارد | ندارد |
+| جذب انرژی در تمام روز | عالی | خوب |
+
+✅ دلیل اصلی: در ایران، زاویه خورشید در فصول مختلف سال تغییر می‌کند. ردیاب دو محوره با حرکت در دو جهت (شرق-غرب و شمال-جنوب)، پنل را برای هر فصلی تنظیم می‌کند.`
+    },
+    {
+        question: "مراحل ساخت پروژه چطور بوده؟",
+        answer: `🔧 مراحل ساخت پروژه:
+
+۱. تحقیق و پژوهش درباره ردیاب‌های خورشیدی
+۲. طراحی اولیه روی کاغذ
+۳. طراحی قطعات و مکانیک
+۴. خرید لوازم موردنیاز
+۵. چاپ سه‌بعدی قطعات
+۶. بستن مدار و سیم‌کشی
+۷. طراحی الگوریتم‌های پیشنهادی
+۸. کدنویسی و برنامه‌نویسی
+۹. اصلاح اولیه کد
+۱۰. تست‌های مختلف و رفع اشکال
+۱۱. تست نهایی و آماده‌سازی برای ارائه`
+    },
+    // ==========================================
+    // بخش ۲: انرژی خورشیدی (۳ سوال)
+    // ==========================================
+    {
+        question: "انرژی خورشیدی چیست؟",
+        answer: `☀️ انرژی خورشیدی، انرژی پاک و تجدیدپذیری است که از تابش خورشید به دست می‌آید. این انرژی یکی از فراوان‌ترین و در دسترس‌ترین منابع انرژی در جهان است.
+
+مزایای انرژی خورشیدی:
+✅ پاک و بدون آلایندگی
+✅ تجدیدپذیر و پایان‌ناپذیر
+✅ در دسترس در اکثر نقاط جهان
+✅ کاهش وابستگی به سوخت‌های فسیلی
+✅ کاهش هزینه‌های برق در بلندمدت`
+    },
+    {
+        question: "چرا انرژی خورشیدی در ایران مهم است؟",
+        answer: `🇮🇷 ایران با میانگین ۳۰۰ روز آفتابی در سال، یکی از بهترین مناطق جهان برای استفاده از انرژی خورشیدی است.
+
+آمار:
+📊 میانگین تابش خورشیدی: ۴.۵ تا ۵.۵ کیلووات‌ساعت بر مترمربع در روز
+🌞 تعداد روزهای آفتابی: حدود ۲۸۰ تا ۳۰۰ روز در سال
+🏜️ بهترین مناطق: کویر مرکزی، یزد، کرمان، اصفهان، خراسان
+
+با توجه به تغییرات فصلی زاویه خورشید در ایران، استفاده از ردیاب دو محوره می‌تواند بازدهی را تا ۴۰ درصد افزایش دهد.`
+    },
+    {
+        question: "آینده انرژی خورشیدی در جهان چگونه است؟",
+        answer: `🚀 آینده انرژی خورشیدی بسیار روشن است:
+
+🔹 پیش‌بینی‌ها:
+   - تا سال ۲۰۳۰، ۳۰٪ برق جهان از خورشید تأمین می‌شود
+   - قیمت پنل‌ها تا ۵۰٪ کاهش می‌یابد
+   - بازدهی پنل‌ها به ۳۰-۴۰٪ می‌رسد
+
+🔹 تکنولوژی‌های جدید:
+   - پنل‌های شفاف (برای پنجره‌ها)
+   - پنل‌های انعطاف‌پذیر (برای لباس و خودرو)
+   - پنل‌های دوطرفه (جذب نور از دو سمت)
+   - ردیاب‌های هوشمند با AI
+   - ذخیره‌سازی پیشرفته`
+    },
+    // ==========================================
+    // بخش ۳: پنل خورشیدی (۳ سوال)
+    // ==========================================
+    {
+        question: "پنل خورشیدی چیست؟",
+        answer: `🔆 پنل خورشیدی وسیله‌ای است که نور خورشید را به برق تبدیل می‌کند. این کار با استفاده از سلول‌های فتوولتائیک (PV) انجام می‌شود که از مواد نیمه‌رسانا مانند سیلیکون ساخته شده‌اند.
+
+انواع پنل خورشیدی:
+1. مونوکریستال – بازدهی بالا (۱۸-۲۲٪)
+2. پلی‌کریستال – بازدهی متوسط (۱۵-۱۷٪)
+3. لایه‌نازک – بازدهی پایین‌تر، انعطاف‌پذیر`
+    },
+    {
+        question: "پنل خورشیدی چطور کار می‌کند؟",
+        answer: `🔬 نحوه کار پنل خورشیدی:
+
+۱. نور خورشید به سلول‌های سیلیکونی برخورد می‌کند
+۲. فوتون‌های نور، الکترون‌ها را آزاد می‌کنند
+۳. الکترون‌ها در مدار حرکت کرده و جریان برق تولید می‌شود
+۴. جریان تولید شده DC (جریان مستقیم) است
+۵. با اینورتر می‌توان آن را به AC (جریان متناوب) تبدیل کرد
+
+💡 در پروژه ما، پنل ۵ ولت ۲ وات برای تغذیه آردوینو و سنسورها استفاده شده است.`
+    },
+    {
+        question: "چه عواملی بر بازدهی پنل تاثیر می‌گذارند؟",
+        answer: `🌡️ عوامل موثر بر بازدهی پنل خورشیدی:
+
+۱. دما: با افزایش دما، بازدهی کاهش می‌یابد (۰.۴-۰.۵٪ به ازای هر ۱ درجه)
+۲. سایه: حتی سایه جزئی می‌تواند بازدهی را تا ۵۰٪ کاهش دهد
+۳. گرد و غبار: کاهش ۵-۲۰٪ بازدهی
+۴. زاویه پنل: زاویه نامناسب باعث کاهش جذب نور می‌شود
+۵. کیفیت پنل: پنل‌های مونوکریستال بازدهی بیشتری دارند
+
+✅ ردیاب دو محوره با تنظیم زاویه و جلوگیری از سایه، بازدهی را افزایش می‌دهد.`
+    },
+    // ==========================================
+    // بخش ۴: ردیاب خورشیدی (۴ سوال)
+    // ==========================================
+    {
+        question: "ردیاب دو محوره چیست؟",
+        answer: `🔆 ردیاب خورشیدی دو محوره، سیستمی است که پنل خورشیدی را در دو جهت عمود بر هم (شرق-غرب و شمال-جنوب) حرکت می‌دهد تا همواره عمود بر تابش خورشید قرار گیرد.
+
+مزایای ردیاب دو محوره:
+✅ افزایش بازدهی تا ۳۰ تا ۴۰ درصد نسبت به پنل ثابت
+✅ جذب انرژی در تمام ساعات روز
+✅ تنظیم زاویه برای فصول مختلف سال
+✅ مناسب برای مناطقی با تغییرات فصلی زیاد`
+    },
+    {
+        question: "تفاوت ردیاب دو محوره و تک محوره چیست؟",
+        answer: `📊 مقایسه ردیاب دو محوره و تک محوره:
+
+| ویژگی | دو محوره | تک محوره |
+|:---|:---:|:---:|
+| افزایش بازدهی | ۳۰-۴۰٪ | ۲۰-۲۵٪ |
+| هزینه | بیشتر | کمتر |
+| پیچیدگی | بیشتر | کمتر |
+| نگهداری | بیشتر | کمتر |
+| تنظیم فصلی | دارد | ندارد |
+
+💡 نتیجه: اگر بودجه کافی دارید و به حداکثر بازدهی نیاز دارید، دو محوره انتخاب بهتری است.`
+    },
+    {
+        question: "کاربردهای ردیاب خورشیدی چیست؟",
+        answer: `🏭 کاربردهای ردیاب خورشیدی:
+
+1. نیروگاه‌های خورشیدی بزرگ (افزایش بازدهی تا ۴۰٪)
+2. مصارف خانگی و پشت بام‌ها (تولید برق بیشتر)
+3. مناطق دور از شبکه برق (تأمین برق پایدار)
+4. کشاورزی (پمپ‌های آب خورشیدی)
+5. صنعت (تأمین برق صنایع)
+6. مناطق کویری (بهره‌گیری از تابش بالا)
+7. پروژه‌های آموزشی (نمایش فناوری انرژی پاک)`
+    },
+    {
+        question: "مزایا و معایب ردیاب خورشیدی چیست؟",
+        answer: `✅ مزایا:
+- افزایش ۳۰-۴۰ درصدی بازدهی
+- جذب انرژی در تمام ساعات روز
+- تنظیم زاویه برای فصول مختلف
+- کاهش تعداد پنل‌های مورد نیاز
+- بازگشت سرمایه در بلندمدت
+
+⚠️ معایب:
+- هزینه اولیه بیشتر
+- نیاز به نگهداری دوره‌ای
+- پیچیدگی بیشتر نسبت به پنل ثابت
+- مصرف انرژی برای حرکت
+- احتمال خرابی قطعات متحرک`
+    },
+    // ==========================================
+    // بخش ۵: سنسورها (۲ سوال)
+    // ==========================================
+    {
+        question: "سنسور LDR چیست؟",
+        answer: `🌞 LDR مخفف Light Dependent Resistor (مقاومت وابسته به نور) است. این سنسور با تغییر شدت نور، مقاومت خود را تغییر می‌دهد.
+
+نحوه کار LDR:
+✅ در نور زیاد: مقاومت کم (چند صد اهم)
+✅ در نور کم: مقاومت زیاد (چند مگا اهم)
+
+کاربرد در این پروژه:
+۴ عدد LDR در چهار جهت اصلی (شرق، غرب، شمال، جنوب) نصب شده‌اند تا با مقایسه شدت نور، موقعیت خورشید را تشخیص دهند.`
+    },
+    {
+        question: "چرا از ۴ سنسور LDR استفاده شده است؟",
+        answer: `🔍 استفاده از ۴ سنسور LDR به جای ۲ سنسور:
+
+✅ دلایل:
+1. تشخیص دقیق‌تر موقعیت خورشید
+2. امکان ردیابی در دو محور (شرق-غرب و شمال-جنوب)
+3. کاهش خطا در شرایط نوری مختلف
+4. عملکرد بهتر در هوای ابری
+
+🔹 نحوه چیدمان:
+- دو سنسور در جهت شرق و غرب (برای محور افقی)
+- دو سنسور در جهت شمال و جنوب (برای محور عمودی)`
+    },
+    // ==========================================
+    // بخش ۶: آردوینو (۲ سوال)
+    // ==========================================
+    {
+        question: "آردوینو چیست؟",
+        answer: `🖥️ آردوینو یک پلتفرم متن‌باز (Open Source) برای ساخت پروژه‌های الکترونیکی است. این برد شامل یک میکروکنترلر است که می‌توان با زبان C++ برنامه‌نویسی کرد.
+
+در این پروژه از برد آردوینو UNO به عنوان مغز متفکر سیستم استفاده شده است.
+وظایف آردوینو:
+✅ خواندن داده‌های ۴ سنسور LDR
+✅ مقایسه شدت نور در چهار جهت
+✅ محاسبه اختلاف نور و تصمیم‌گیری
+✅ ارسال فرمان به موتورهای سروو
+✅ تشخیص شب و خاموش کردن موتورها`
+    },
+    {
+        question: "چرا آردوینو UNO انتخاب شده است؟",
+        answer: `🔧 دلایل انتخاب آردوینو UNO:
+
+✅ مزایا:
+1. قیمت مناسب و در دسترس
+2. تعداد زیاد پین‌های ورودی/خروجی
+3. سادگی برنامه‌نویسی با زبان C++
+4. جامعه بزرگ کاربری و منابع آموزشی
+5. قابلیت اتصال به سنسورهای مختلف
+
+✅ مشخصات فنی:
+- میکروکنترلر: ATmega328P
+- ولتاژ کاری: ۵ ولت
+- ۱۴ پین دیجیتال (۶ عدد PWM)
+- ۶ پین آنالوگ
+- حافظه فلش: ۳۲ کیلوبایت`
+    },
+    // ==========================================
+    // بخش ۷: بازدهی (۲ سوال)
+    // ==========================================
+    {
+        question: "بازدهی ردیاب چقدر است؟",
+        answer: `📊 ردیاب خورشیدی دو محوره می‌تواند بازدهی پنل خورشیدی را به‌طور چشمگیری افزایش دهد:
+
+📈 افزایش بازدهی نسبت به پنل ثابت: ۳۰ تا ۴۰ درصد
+📈 افزایش بازدهی نسبت به ردیاب تک‌محوره: ۸ تا ۲۰ درصد
+
+این افزایش بازدهی به دلیل:
+✅ ردیابی دقیق خورشید در دو جهت
+✅ تنظیم زاویه پنل برای فصول مختلف سال
+✅ جذب حداکثری انرژی در ساعات ابتدایی و انتهایی روز
+✅ کاهش زاویه انحراف (Cosine Loss)`
+    },
+    {
+        question: "چطور بازدهی افزایش پیدا می‌کند؟",
+        answer: `📈 مکانیزم افزایش بازدهی:
+
+۱. کاهش زاویه انحراف (Cosine Loss):
+   - پنل همیشه عمود بر خورشید قرار می‌گیرد
+   - جذب حداکثری نور در تمام ساعات
+
+۲. تنظیم فصلی:
+   - تغییر زاویه پنل در تابستان و زمستان
+   - استفاده از حداکثر تابش در هر فصل
+
+۳. ردیابی دقیق:
+   - دنبال کردن خورشید از طلوع تا غروب
+   - جذب انرژی در ساعات ابتدایی و انتهایی روز`
+    },
+    // ==========================================
+    // بخش ۸: هزینه (۲ سوال)
+    // ==========================================
+    {
+        question: "هزینه ساخت ردیاب چقدر است؟",
+        answer: `💰 هزینه کل پروژه ردیاب خورشیدی دو محوره:
+
+🔹 الکترونیک (آردوینو، LDR، مقاومت، خازن و ...): ~۱.۵ میلیون تومان
+🔹 موتورها (MG995 و SG90): ~۸۰۰ هزار تومان
+🔹 چاپ سه‌بعدی قطعات: ~۱.۵ میلیون تومان
+🔹 سایر قطعات (پیچ، مهره، بردبورد و ...): ~۲۰۰ هزار تومان
+
+📊 مجموع هزینه: حدود ۴ میلیون تومان
+
+💡 نکته: با افزایش تعداد قطعات یا استفاده از قطعات با کیفیت‌تر، هزینه می‌تواند افزایش یابد.`
+    },
+    {
+        question: "آیا این پروژه مقرون به صرفه است؟",
+        answer: `💸 بررسی مقرون به صرفه بودن:
+
+✅ با یک پنل ۵۰ واتی:
+   - هزینه ردیاب: ~۴ میلیون تومان
+   - افزایش تولید انرژی: ~۳۰-۴۰٪
+   - زمان بازگشت سرمایه: ~۳-۵ سال
+
+✅ مزایا:
+   - افزایش تولید انرژی بدون نیاز به پنل جدید
+   - کاهش هزینه برق در بلندمدت
+   - قابلیت استفاده در مناطق بدون برق
+
+⚠️ نکته: برای سیستم‌های کوچک آموزشی، هدف اصلی نمایش فناوری است.`
+    },
+    // ==========================================
+    // بخش ۹: تیم (۲ سوال)
+    // ==========================================
+    {
+        question: "تیم پروژه چه کسانی هستند؟",
+        answer: `👥 پروژه ردیاب خورشیدی دو محوره توسط تیم سه نفره زیر انجام شده است:
+
+🔹 محمدصالح عرشی‌زاده: مسئول الکترونیک و مدار
+🔹 دانیال ایمان‌پور: برنامه‌نویس و هماهنگ‌کننده
+🔹 پارسا اعظمی: مسئول مکانیک و سازه
+
+این پروژه برای سمینار علمی مدرسه حلی طراحی و ساخته شده است.
+
+هدف اصلی: نشان دادن کاربرد انرژی خورشیدی و افزایش بازدهی پنل‌ها با استفاده از ردیاب دو محوره.`
+    },
+    {
+        question: "هر کدام از اعضای تیم چه کاری انجام دادند؟",
+        answer: `👥 تقسیم کار در تیم:
+
+🔹 محمدصالح عرشی‌زاده:
+   - تحقیق و پژوهش
+   - طرح اولیه روی کاغذ
+   - بستن مدار
+   - جلوه بصری
+   - طراحی الگوریتم‌های پیشنهادی
+
+🔹 دانیال ایمان‌پور:
+   - تحقیق و پژوهش
+   - طرح اولیه روی کاغذ
+   - ساخت قطعات (با کمک پرینتر سه‌بعدی)
+   - خرید لوازم موردنیاز
+   - طراحی الگوریتم‌های پیشنهادی
+   - انتخاب الگوریتم برتر
+   - کدنویسی
+
+🔹 پارسا اعظمی:
+   - تحقیق و پژوهش
+   - ساخت قطعات (با کمک پرینتر سه‌بعدی)
+   - خرید لوازم موردنیاز
+   - بستن مدار
+   - انتخاب الگوریتم برتر
+   - کدنویسی`
+    },
+    // ==========================================
+    // بخش ۱۰: قطعات (۳ سوال)
+    // ==========================================
+    {
+        question: "قطعات پروژه چیست؟",
+        answer: `📋 لیست قطعات پروژه ردیاب خورشیدی دو محوره:
+
+🔹 الکترونیک:
+- برد آردوینو UNO
+- ۴ عدد سنسور LDR
+- ۴ عدد مقاومت ۱۰ کیلو اهم
+- ۱ عدد خازن ۱۰۰۰ µF / ۲۵ ولت
+- بردبورد و سیم جامپر
+
+🔹 موتورها:
+- ۱ عدد موتور سروو MG995 (محور افقی)
+- ۱ عدد موتور سروو SG90 (محور عمودی)
+
+🔹 سازه:
+- قطعات چاپ سه‌بعدی (PLA+)
+- پیچ و مهره‌های M3 و M4
+
+🔹 تغذیه:
+- پنل خورشیدی ۵ ولت ۲ وات
+- باتری لیتیوم‌پلیمر ۳.۷ ولت
+- آداپتور ۵ ولت ۲ آمپر`
+    },
+    {
+        question: "چرا از موتور MG995 و SG90 استفاده شده است؟",
+        answer: `⚙️ دلیل انتخاب این دو موتور:
+
+🔹 MG995 (موتور محور افقی):
+   - گشتاور بالا: ۱۲ کیلوگرم-سانتی‌متر
+   - دنده‌های فلزی (مقاوم)
+   - مناسب برای تحمل وزن پنل و سازه
+   - جریان مصرفی: ~۱.۵ آمپر
+
+🔹 SG90 (موتور محور عمودی):
+   - گشتاور مناسب: ۲.۵ کیلوگرم-سانتی‌متر
+   - وزن کم و جمع‌وجور
+   - مناسب برای تغییر زاویه عمودی
+   - جریان مصرفی: ~۲۰۰ میلی‌آمپر
+
+💡 نکته: هر دو با آردوینو سازگار هستند و به راحتی قابل کنترل هستند.`
+    },
+    {
+        question: "نقش خازن ۱۰۰۰ µF در پروژه چیست؟",
+        answer: `🔋 نقش خازن ۱۰۰۰ µF در پروژه:
+
+✅ وظیفه اصلی:
+   - جلوگیری از نوسانات ولتاژ
+   - تثبیت جریان تغذیه موتور MG995
+
+✅ چرا نیاز است؟
+   - موتور MG995 در لحظه راه‌اندازی جریان بالایی می‌کشد (تا ۲ آمپر)
+   - این جریان باعث افت ولتاژ و ریست شدن آردوینو می‌شود
+   - خازن این نوسانات را جذب کرده و ولتاژ را پایدار نگه می‌دارد
+
+✅ محل نصب:
+   - بین پین‌های ۵ ولت و GND موتور MG995
+   - نزدیک به موتور نصب می‌شود`
+    }
+];
+
+        // ===== باز و بسته کردن لیست سوالات =====
+        function toggleQuestionList() {
+            const list = document.getElementById('questionList');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+            } else {
+                list.style.display = 'none';
+            }
+        }
+
+        // ===== پرسیدن سوال از لیست =====
+        function askQuestion(question) {
+            const messagesContainer = document.getElementById('chatModalMessages');
+            
+            // اضافه کردن سوال کاربر
+            const userMsg = document.createElement('div');
+            userMsg.className = 'chat-message user';
+            userMsg.innerHTML = `<span class="chat-icon">👤</span><span class="chat-text">${question}</span>`;
+            messagesContainer.appendChild(userMsg);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            
+            // پیدا کردن پاسخ از دیتابیس
+            let answer = "متاسفانه پاسخ این سوال را پیدا نکردم. لطفا سوال خود را به صورت دیگری بپرسید.";
+            for (const item of qaDatabase) {
+                if (item.question === question) {
+                    answer = item.answer;
+                    break;
+                }
+            }
+            
+            // اضافه کردن پاسخ ربات با تاخیر
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'chat-message bot';
+                botMsg.innerHTML = `<span class="chat-icon">🤖</span><span class="chat-text">${answer.replace(/\n/g, '<br>')}</span>`;
+                messagesContainer.appendChild(botMsg);
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            }, 300);
+            
+            // بستن لیست سوالات
+            document.getElementById('questionList').style.display = 'none';
+        }
+
+        // ============================================================
+        // 🤖 مدیریت مودال چت‌بات
+        // ============================================================
         function openChatModal() {
             document.getElementById('chatModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
+            
+            // اگر پیامی وجود ندارد، پیام خوش‌آمدگویی نمایش داده شود
+            const messagesContainer = document.getElementById('chatModalMessages');
+            if (messagesContainer.children.length === 0) {
+                const welcomeMsg = document.createElement('div');
+                welcomeMsg.className = 'chat-message bot';
+                welcomeMsg.innerHTML = `<span class="chat-icon">🤖</span><span class="chat-text">👋 سلام! من SolarBot هستم، دستیار هوشمند انرژی خورشیدی.<br><br>می‌توانید سوال خود را بنویسید یا از دکمه <strong>📋 لیست سوالات</strong> استفاده کنید.</span>`;
+                messagesContainer.appendChild(welcomeMsg);
+            }
         }
+
         function closeChatModal() {
             document.getElementById('chatModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
+
+        // بستن با کلیک روی پس‌زمینه
         document.addEventListener('click', function(event) {
             const modal = document.getElementById('chatModal');
             if (event.target === modal) {
                 closeChatModal();
             }
         });
+
+        // بستن با دکمه Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modal = document.getElementById('chatModal');
@@ -1473,72 +1863,64 @@
             }
         });
 
-        function initChatBotModal() {
-            const messagesContainer = document.getElementById('chatModalMessages');
+        // ===== ارسال سوال از طریق فرم =====
+        document.addEventListener('DOMContentLoaded', function() {
             const form = document.getElementById('chatModalForm');
             const input = document.getElementById('chatModalInput');
-            const sendBtn = document.getElementById('chatModalSendBtn');
-
-            const welcomeText = `👋 سلام! من SolarBot 1.0 هستم، دستیار هوشمند این تیم.\n\nاز من هر سوالی درباره انرژی خورشیدی، پنل‌های خورشیدی، ردیاب‌های دو محوره و تک‌محوره، سنسور LDR، سروو موتور، آردوینو و ... بپرسید.`;
-            addMessageModal('bot', welcomeText);
-
-            function addMessageModal(type, text) {
-                const messageDiv = document.createElement('div');
-                messageDiv.className = `chat-message ${type}`;
-                const icon = document.createElement('span');
-                icon.className = 'chat-icon';
-                icon.textContent = type === 'user' ? '👤' : '🤖';
-                const textSpan = document.createElement('span');
-                textSpan.className = 'chat-text';
-                textSpan.innerHTML = text.replace(/\n/g, '<br>');
-                messageDiv.appendChild(icon);
-                messageDiv.appendChild(textSpan);
-                messagesContainer.appendChild(messageDiv);
-                messagesContainer.scrollTop = messagesContainer.scrollHeight;
-            }
-
-            function processModalQuestion(userInput) {
-                if (!userInput || userInput.trim() === '') return;
-                addMessageModal('user', userInput);
-                const result = findBestMatch(userInput);
-                setTimeout(() => {
-                    addMessageModal('bot', result.answer);
-                }, 300);
-            }
-
+            
             if (form) {
-                form.addEventListener('submit', (e) => {
+                form.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    const text = input.value.trim();
-                    if (text) {
-                        processModalQuestion(text);
-                        input.value = '';
-                    }
-                });
-            }
-            if (sendBtn && input) {
-                sendBtn.addEventListener('click', () => {
-                    const text = input.value.trim();
-                    if (text) {
-                        processModalQuestion(text);
-                        input.value = '';
-                    }
-                });
-                input.addEventListener('keypress', (e) => {
-                    if (e.key === 'Enter') {
-                        e.preventDefault();
-                        const text = input.value.trim();
-                        if (text) {
-                            processModalQuestion(text);
-                            input.value = '';
+                    const question = input.value.trim();
+                    if (question) {
+                        // اضافه کردن سوال کاربر
+                        const messagesContainer = document.getElementById('chatModalMessages');
+                        const userMsg = document.createElement('div');
+                        userMsg.className = 'chat-message user';
+                        userMsg.innerHTML = `<span class="chat-icon">👤</span><span class="chat-text">${question}</span>`;
+                        messagesContainer.appendChild(userMsg);
+                        messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        
+                        // پیدا کردن پاسخ از دیتابیس (مقایسه کلیدواژه‌ها)
+                        let answer = "متاسفانه پاسخ این سوال را پیدا نکردم. لطفا سوال خود را به صورت دیگری بپرسید یا از لیست سوالات استفاده کنید.";
+                        
+                        // جستجوی سوال در دیتابیس
+                        const lowerQuestion = question.toLowerCase();
+                        for (const item of qaDatabase) {
+                            const lowerItem = item.question.toLowerCase();
+                            // اگر سوال مشابه بود
+                            if (lowerQuestion.includes(lowerItem) || lowerItem.includes(lowerQuestion)) {
+                                answer = item.answer;
+                                break;
+                            }
+                            // چک کردن کلمات کلیدی
+                            const keywords = ['پروژه', 'انرژی', 'پنل', 'ردیاب', 'LDR', 'آردوینو', 'بازدهی', 'هزینه', 'تیم', 'قطعات'];
+                            for (const keyword of keywords) {
+                                if (lowerQuestion.includes(keyword)) {
+                                    for (const item2 of qaDatabase) {
+                                        if (item2.question.includes(keyword)) {
+                                            answer = item2.answer;
+                                            break;
+                                        }
+                                    }
+                                    break;
+                                }
+                            }
                         }
+                        
+                        // اضافه کردن پاسخ ربات با تاخیر
+                        setTimeout(() => {
+                            const botMsg = document.createElement('div');
+                            botMsg.className = 'chat-message bot';
+                            botMsg.innerHTML = `<span class="chat-icon">🤖</span><span class="chat-text">${answer.replace(/\n/g, '<br>')}</span>`;
+                            messagesContainer.appendChild(botMsg);
+                            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+                        }, 300);
+                        
+                        input.value = '';
                     }
                 });
             }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            initChatBotModal();
         });
     </script>
 </body>
