@@ -639,6 +639,29 @@
         footer .socials a:hover {
             opacity: 1;
         }
+        /* ===== استایل دکمه‌های لیست سوالات ===== */
+        .q-btn {
+            background: #fff;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            padding: 8px 14px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            text-align: right;
+            transition: all 0.2s;
+            font-family: inherit;
+            color: #212529;
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .q-btn:hover {
+            border-color: #1A73E8;
+            background: #E8F0FE;
+            transform: scale(1.02);
+        }
         .back-to-top {
             position: fixed;
             bottom: 30px;
@@ -1176,39 +1199,55 @@
                 </div>
             </div>
 
-            <!-- ===== لیست سوالات (کشویی) ===== -->
-            <div id="questionList" style="display: none; background: #f8f9fa; padding: 12px 16px; border-bottom: 1px solid #e9ecef; max-height: 200px; overflow-y: auto; flex-shrink: 0;">
+            <!-- ===== لیست سوالات (کشویی) با ۲۷ سوال ===== -->
+            <div id="questionList" style="display: none; background: #f8f9fa; padding: 12px 16px; border-top: 1px solid #e9ecef; max-height: 400px; overflow-y: auto; flex-shrink: 0;">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 6px;">
-                    <button onclick="askQuestion('پروژه چطوری کار می‌کنه؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 پروژه چطوری کار می‌کنه؟
-                    </button>
-                    <button onclick="askQuestion('انرژی خورشیدی چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 انرژی خورشیدی چیست؟
-                    </button>
-                    <button onclick="askQuestion('پنل خورشیدی چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 پنل خورشیدی چیست؟
-                    </button>
-                    <button onclick="askQuestion('ردیاب دو محوره چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 ردیاب دو محوره چیست؟
-                    </button>
-                    <button onclick="askQuestion('سنسور LDR چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 سنسور LDR چیست؟
-                    </button>
-                    <button onclick="askQuestion('آردوینو چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 آردوینو چیست؟
-                    </button>
-                    <button onclick="askQuestion('بازدهی ردیاب چقدر است؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 بازدهی ردیاب چقدر است؟
-                    </button>
-                    <button onclick="askQuestion('هزینه ساخت ردیاب چقدر است؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 هزینه ساخت ردیاب چقدر است؟
-                    </button>
-                    <button onclick="askQuestion('تیم پروژه چه کسانی هستند؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 تیم پروژه چه کسانی هستند؟
-                    </button>
-                    <button onclick="askQuestion('قطعات پروژه چیست؟')" style="background: #fff; border: 1px solid #e9ecef; border-radius: 12px; padding: 8px 14px; font-size: 0.8rem; cursor: pointer; text-align: right; transition: all 0.2s; font-family: inherit; color: #212529;" onmouseover="this.style.borderColor='#1A73E8'; this.style.background='#E8F0FE'" onmouseout="this.style.borderColor='#e9ecef'; this.style.background='#fff'">
-                        🔹 قطعات پروژه چیست؟
-                    </button>
+                    <!-- گروه ۱: پروژه (۴ سوال) -->
+                    <button onclick="askQuestion('پروژه چطوری کار می‌کنه؟')" class="q-btn">🔹 پروژه چطوری کار می‌کنه؟</button>
+                    <button onclick="askQuestion('هدف از ساخت این پروژه چیست؟')" class="q-btn">🔹 هدف از ساخت این پروژه چیست؟</button>
+                    <button onclick="askQuestion('چرا دو محوره؟ تک محوره کافی نیست؟')" class="q-btn">🔹 چرا دو محوره؟</button>
+                    <button onclick="askQuestion('مراحل ساخت پروژه چطور بوده؟')" class="q-btn">🔹 مراحل ساخت پروژه چطور بوده؟</button>
+                    
+                    <!-- گروه ۲: انرژی خورشیدی (۳ سوال) -->
+                    <button onclick="askQuestion('انرژی خورشیدی چیست؟')" class="q-btn">🔹 انرژی خورشیدی چیست؟</button>
+                    <button onclick="askQuestion('چرا انرژی خورشیدی در ایران مهم است؟')" class="q-btn">🔹 چرا انرژی خورشیدی در ایران مهم است؟</button>
+                    <button onclick="askQuestion('آینده انرژی خورشیدی در جهان چگونه است؟')" class="q-btn">🔹 آینده انرژی خورشیدی در جهان؟</button>
+                    
+                    <!-- گروه ۳: پنل خورشیدی (۳ سوال) -->
+                    <button onclick="askQuestion('پنل خورشیدی چیست؟')" class="q-btn">🔹 پنل خورشیدی چیست؟</button>
+                    <button onclick="askQuestion('پنل خورشیدی چطور کار می‌کند؟')" class="q-btn">🔹 پنل خورشیدی چطور کار می‌کند؟</button>
+                    <button onclick="askQuestion('چه عواملی بر بازدهی پنل تاثیر می‌گذارند؟')" class="q-btn">🔹 عوامل موثر بر بازدهی پنل؟</button>
+                    
+                    <!-- گروه ۴: ردیاب خورشیدی (۴ سوال) -->
+                    <button onclick="askQuestion('ردیاب دو محوره چیست؟')" class="q-btn">🔹 ردیاب دو محوره چیست؟</button>
+                    <button onclick="askQuestion('تفاوت ردیاب دو محوره و تک محوره چیست؟')" class="q-btn">🔹 تفاوت دو محوره و تک محوره؟</button>
+                    <button onclick="askQuestion('کاربردهای ردیاب خورشیدی چیست؟')" class="q-btn">🔹 کاربردهای ردیاب خورشیدی؟</button>
+                    <button onclick="askQuestion('مزایا و معایب ردیاب خورشیدی چیست؟')" class="q-btn">🔹 مزایا و معایب ردیاب خورشیدی؟</button>
+                    
+                    <!-- گروه ۵: سنسورها (۲ سوال) -->
+                    <button onclick="askQuestion('سنسور LDR چیست؟')" class="q-btn">🔹 سنسور LDR چیست؟</button>
+                    <button onclick="askQuestion('چرا از ۴ سنسور LDR استفاده شده است؟')" class="q-btn">🔹 چرا از ۴ سنسور LDR؟</button>
+                    
+                    <!-- گروه ۶: آردوینو (۲ سوال) -->
+                    <button onclick="askQuestion('آردوینو چیست؟')" class="q-btn">🔹 آردوینو چیست؟</button>
+                    <button onclick="askQuestion('چرا آردوینو UNO انتخاب شده است؟')" class="q-btn">🔹 چرا آردوینو UNO؟</button>
+                    
+                    <!-- گروه ۷: بازدهی (۲ سوال) -->
+                    <button onclick="askQuestion('بازدهی ردیاب چقدر است؟')" class="q-btn">🔹 بازدهی ردیاب چقدر است؟</button>
+                    <button onclick="askQuestion('چطور بازدهی افزایش پیدا می‌کند؟')" class="q-btn">🔹 چطور بازدهی افزایش پیدا می‌کند؟</button>
+                    
+                    <!-- گروه ۸: هزینه (۲ سوال) -->
+                    <button onclick="askQuestion('هزینه ساخت ردیاب چقدر است؟')" class="q-btn">🔹 هزینه ساخت ردیاب چقدر است؟</button>
+                    <button onclick="askQuestion('آیا این پروژه مقرون به صرفه است؟')" class="q-btn">🔹 آیا پروژه مقرون به صرفه است؟</button>
+                    
+                    <!-- گروه ۹: تیم (۲ سوال) -->
+                    <button onclick="askQuestion('تیم پروژه چه کسانی هستند؟')" class="q-btn">🔹 تیم پروژه چه کسانی هستند؟</button>
+                    <button onclick="askQuestion('هر کدام از اعضای تیم چه کاری انجام دادند؟')" class="q-btn">🔹 وظایف اعضای تیم؟</button>
+                    
+                    <!-- گروه ۱۰: قطعات (۳ سوال) -->
+                    <button onclick="askQuestion('قطعات پروژه چیست؟')" class="q-btn">🔹 قطعات پروژه چیست؟</button>
+                    <button onclick="askQuestion('چرا از موتور MG995 و SG90 استفاده شده است؟')" class="q-btn">🔹 چرا MG995 و SG90؟</button>
+                    <button onclick="askQuestion('نقش خازن ۱۰۰۰ µF در پروژه چیست؟')" class="q-btn">🔹 نقش خازن ۱۰۰۰ µF چیست؟</button>
                 </div>
             </div>
 
@@ -1217,10 +1256,7 @@
 
             <!-- ===== فرم ورودی ===== -->
             <form id="chatModalForm" style="display: flex; gap: 12px; padding: 14px 20px; border-top: 1px solid #e9ecef; background: #fff; flex-shrink: 0;">
-                <input id="chatModalInput" type="text" placeholder="سوال خود را بپرسید..." style="flex: 1; padding: 10px 16px; border: 2px solid #e9ecef; border-radius: 40px; font-size: 0.95rem; outline: none; transition: border-color 0.2s; font-family: inherit;" onfocus="this.style.borderColor='#1A73E8'" onblur="this.style.borderColor='#e9ecef'">
-                <button id="chatModalSendBtn" type="submit" style="padding: 10px 22px; background: #1A73E8; color: #fff; border: none; border-radius: 40px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.2s; white-space: nowrap;" onmouseover="this.style.background='#0D47A1'" onmouseout="this.style.background='#1A73E8'">
-                    📨 ارسال
-                </button>
+                <input id="chatModalInput" type="text" placeholder="سوال خود را از لیست سوالات انتخاب کنید..." style="flex: 1; padding: 10px 16px; border: 2px solid #e9ecef; border-radius: 40px; font-size: 0.95rem; outline: none; transition: border-color 0.2s; font-family: inherit; background: #f8f9fa; color: #6c757d;" readonly onfocus="this.style.borderColor='#1A73E8'" onblur="this.style.borderColor='#e9ecef'">
             </form>
         </div>
     </div>
@@ -1834,7 +1870,7 @@
             if (messagesContainer.children.length === 0) {
                 const welcomeMsg = document.createElement('div');
                 welcomeMsg.className = 'chat-message bot';
-                welcomeMsg.innerHTML = `<span class="chat-icon">🤖</span><span class="chat-text">👋 سلام! من SolarBot هستم، دستیار هوشمند انرژی خورشیدی.<br><br>می‌توانید سوال خود را بنویسید یا از دکمه <strong>📋 لیست سوالات</strong> استفاده کنید.</span>`;
+                welcomeMsg.innerHTML = `<span class="chat-icon">🤖</span><span class="chat-text">👋 سلام! من SolarBot هستم، دستیار هوشمند این تیم.<br>لطفا سوال خود را از لیست سوالات انتخاب کنید.<br></span>`;
                 messagesContainer.appendChild(welcomeMsg);
             }
         }
