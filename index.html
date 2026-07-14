@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
     <title>ردیاب خورشیدی دو محوره</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="last.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="last.png">
+    <link rel="shortcut icon" href="last.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
@@ -481,13 +484,11 @@
             background: #1A73E8;
             transform: scale(1.2);
         }
-        /* ========== انیمیشن تغییر رنگ ملایم برای دکمه چت‌بات ========== */
         .chat-btn-glow {
             background: linear-gradient(135deg, #1A73E8, #0D47A1);
             animation: colorCycle 3s ease-in-out infinite;
             box-shadow: 0 4px 14px rgba(26,115,232,0.3);
         }
-
         @keyframes colorCycle {
             0% {
                 background: linear-gradient(135deg, #1A73E8, #0D47A1);
@@ -620,7 +621,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* ===== استایل بخش راهنما ===== */
         .help-modal-content {
             background: #fff;
             margin: 2% auto;
@@ -637,7 +637,6 @@
             display: flex;
             flex-direction: column;
         }
-
         .help-modal-content .modal-header {
             background: #0D47A1;
             padding: 16px 24px;
@@ -649,27 +648,22 @@
             flex-wrap: wrap;
             gap: 10px;
         }
-
         .help-modal-content .modal-header .title-section {
             display: flex;
             align-items: center;
             gap: 12px;
         }
-
         .help-modal-content .modal-header .title-section .icon {
             font-size: 1.8rem;
         }
-
         .help-modal-content .modal-header .title-section .title-main {
             font-weight: 700;
             font-size: 1.1rem;
         }
-
         .help-modal-content .modal-header .title-section .title-sub {
             font-size: 0.7rem;
             opacity: 0.8;
         }
-
         .help-modal-content .modal-header .close-btn {
             background: rgba(255,255,255,0.15);
             border: none;
@@ -685,11 +679,9 @@
             justify-content: center;
             line-height: 1;
         }
-
         .help-modal-content .modal-header .close-btn:hover {
             background: rgba(255,255,255,0.3);
         }
-
         .help-modal-content .modal-body-scroll {
             flex: 1;
             overflow-y: auto;
@@ -697,20 +689,16 @@
             background: #fafbfc;
             max-height: 65vh;
         }
-
         .help-modal-content .modal-body-scroll::-webkit-scrollbar {
             width: 6px;
         }
-
         .help-modal-content .modal-body-scroll::-webkit-scrollbar-track {
             background: #f1f3f5;
         }
-
         .help-modal-content .modal-body-scroll::-webkit-scrollbar-thumb {
             background: #1A73E8;
             border-radius: 4px;
         }
-
         .help-item {
             background: #fff;
             border-radius: 16px;
@@ -720,11 +708,9 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.04);
             transition: all 0.3s ease;
         }
-
         .help-item:hover {
             border-color: #1A73E8;
         }
-
         .help-item .help-question {
             width: 100%;
             background: none;
@@ -741,11 +727,9 @@
             font-family: inherit;
             transition: background 0.2s;
         }
-
         .help-item .help-question:hover {
             background: #f8f9fa;
         }
-
         .help-item .help-question .arrow-icon {
             font-size: 1.2rem;
             color: #1A73E8;
@@ -753,11 +737,9 @@
             margin-right: 12px;
             flex-shrink: 0;
         }
-
         .help-item.open .help-question .arrow-icon {
             transform: rotate(180deg);
         }
-
         .help-item .help-answer {
             max-height: 0;
             overflow: hidden;
@@ -768,24 +750,20 @@
             line-height: 1.9;
             direction: rtl;
         }
-
         .help-item.open .help-answer {
             max-height: 800px;
             padding: 0 20px 20px;
         }
-
         .help-item .help-answer .answer-text {
             display: inline-block;
             opacity: 0;
             transform: translateX(-10px);
             transition: opacity 0.4s ease, transform 0.4s ease;
         }
-
         .help-item.open .help-answer .answer-text {
             opacity: 1;
             transform: translateX(0);
         }
-
         .help-item .help-answer .answer-text .typing-cursor {
             display: inline-block;
             width: 2px;
@@ -795,21 +773,17 @@
             vertical-align: text-bottom;
             margin-right: 2px;
         }
-
         @keyframes blink {
             0%, 100% { opacity: 0; }
             50% { opacity: 1; }
         }
-
         .help-item .help-answer .answer-text .char {
             opacity: 0;
             animation: typeIn 0.05s forwards;
         }
-
         @keyframes typeIn {
             to { opacity: 1; }
         }
-
         .help-footer {
             padding: 14px 24px;
             border-top: 1px solid #e9ecef;
@@ -819,12 +793,9 @@
             font-size: 0.85rem;
             color: #6c757d;
         }
-
         .help-footer strong {
             color: #0D47A1;
         }
-
-        /* ===== واکنش‌گرایی مودال ===== */
         @media (max-width: 600px) {
             .help-modal-content {
                 margin: 0 !important;
@@ -1110,12 +1081,9 @@
                 font-size: 1rem;
             }
         }
-        /* ===== حالت تاریک ===== */
         body.dark-mode {
             background: #000000 !important;
         }
-
-        /* همه متن‌ها سفید خالص */
         body.dark-mode p,
         body.dark-mode h1,
         body.dark-mode h2,
@@ -1150,44 +1118,32 @@
         body.dark-mode .feature-card span {
             color: #ffffff !important;
         }
-
-        /* ===== منوی همبرگری در حالت تاریک ===== */
         body.dark-mode .nav-links {
             background: #111111 !important;
             box-shadow: 0 8px 32px rgba(0,0,0,0.8) !important;
         }
-
         body.dark-mode .nav-links a {
             color: #ffffff !important;
         }
-
         body.dark-mode .nav-links a:hover {
             color: #aaaaaa !important;
         }
-
-        /* ===== پس‌زمینه‌ها ===== */
         body.dark-mode .navbar {
             background: rgba(0, 0, 0, 0.95) !important;
         }
-
         body.dark-mode .hero {
             background: #000000 !important;
             border-bottom: 1px solid #222222 !important;
         }
-
         body.dark-mode section#team {
             background: #0a0a0a !important;
         }
-
         body.dark-mode section#gallery {
             background: #0a0a0a !important;
         }
-
         body.dark-mode footer {
             background: #000000 !important;
         }
-
-        /* ===== کارت‌ها و باکس‌ها ===== */
         body.dark-mode .stat-card,
         body.dark-mode .team-card,
         body.dark-mode .feature-card,
@@ -1199,20 +1155,15 @@
             background: #111111 !important;
             border-color: #222222 !important;
         }
-
         body.dark-mode .help-modal-content .modal-body-scroll {
             background: #0a0a0a !important;
         }
-
         body.dark-mode .help-modal-content .modal-header {
             background: #000000 !important;
         }
-
         body.dark-mode .help-footer {
             background: #111111 !important;
         }
-
-        /* ===== دکمه‌ها ===== */
         body.dark-mode .btn-outline {
             color: #ffffff !important;
             border-color: #ffffff !important;
@@ -1221,7 +1172,6 @@
             background: #ffffff !important;
             color: #000000 !important;
         }
-
         body.dark-mode .btn-primary {
             background: #333333 !important;
             color: #ffffff !important;
@@ -1229,7 +1179,6 @@
         body.dark-mode .btn-primary:hover {
             background: #555555 !important;
         }
-
         body.dark-mode .back-to-top {
             background: #ffffff !important;
             color: #000000 !important;
@@ -1237,7 +1186,6 @@
         body.dark-mode .back-to-top:hover {
             background: #cccccc !important;
         }
-
         body.dark-mode .chat-btn-glow {
             background: #333333 !important;
             color: #ffffff !important;
@@ -1245,8 +1193,6 @@
         body.dark-mode .chat-btn-glow:hover {
             background: #555555 !important;
         }
-
-        /* ===== اسلایدر ===== */
         body.dark-mode .slider-dot {
             background: #444444 !important;
         }
@@ -1260,40 +1206,29 @@
         body.dark-mode .slider-btn:hover {
             background: #ffffff !important;
         }
-
-        /* ===== دکمه بستن ===== */
         body.dark-mode .close-modal {
             color: #888888 !important;
         }
         body.dark-mode .close-modal:hover {
             color: #ffffff !important;
         }
-
-        /* ===== ویدیو ===== */
         body.dark-mode .video-wrapper {
             background: #111111 !important;
             border-color: #333333 !important;
         }
-
-        /* ===== نوار پیشرفت ===== */
         body.dark-mode #readingProgressText {
             color: #888888 !important;
         }
         body.dark-mode #readingProgressBar {
             background: #ffffff !important;
         }
-
-        /* ===== رفع مشکل هاور سوالات راهنما در حالت تاریک ===== */
         body.dark-mode .help-item .help-question:hover {
             background: #222222 !important;
             color: #ffffff !important;
         }
-
         body.dark-mode .help-item .help-question {
             color: #ffffff !important;
         }
-
-        /* ===== دکمه حالت تاریک ===== */
         body.dark-mode .dark-toggle {
             color: #ffffff !important;
         }
@@ -1301,30 +1236,21 @@
             color: #aaaaaa !important;
         }
         .dark-toggle {
-            font-size: 2.0rem !important;  /* این عدد رو تغییر بدید */
+            font-size: 2.0rem !important;
         }
-
-        /* ===== آیکون‌ها (همه سفید) ===== */
         body.dark-mode i:not(.slider-btn i):not(.back-to-top i) {
             color: #ffffff !important;
         }
-
-        /* فلش‌های اسلایدر و دکمه بازگشت سیاه */
         body.dark-mode .slider-btn i,
         body.dark-mode .back-to-top i {
             color: #000000 !important;
         }
-
-        /* ===== تگ‌های اضافی ===== */
         body.dark-mode .nav-links a:hover {
             color: #ffffff !important;
         }
-
         body.dark-mode .modal-title {
             border-bottom-color: #444444 !important;
         }
-
-        /* ===== جزئیات بیشتر کلیک کنید ===== */
         body.dark-mode .feature-card span {
             color: #ffffff !important;
             opacity: 1 !important;
@@ -1333,29 +1259,26 @@
 </head>
 <body>
     <nav class="navbar" id="navbar">
-    <div class="container">
-        <a href="#home" class="logo">Solar<span>Tracker</span></a>
-        <div style="display: flex; align-items: center; gap: 12px;">
-            <!-- دکمه حالت تاریک (همیشه نمایش داده میشه) -->
-            <button class="dark-toggle" id="darkToggle" aria-label="تغییر حالت تاریک/روشن" style="background: none; border: none; color: #1A73E8; font-size: 1.4rem; cursor: pointer; padding: 4px 8px; transition: color 0.2s;">
-                <i class="fas fa-moon"></i>
-            </button>
-            <!-- دکمه همبرگری -->
-            <button class="nav-toggle" id="navToggle" aria-label="منو">
-                <i class="fas fa-bars"></i>
-            </button>
+        <div class="container">
+            <a href="#home" class="logo">Solar<span>Tracker</span></a>
+            <div style="display: flex; align-items: center; gap: 12px;">
+                <button class="dark-toggle" id="darkToggle" aria-label="تغییر حالت تاریک/روشن" style="background: none; border: none; color: #1A73E8; font-size: 1.4rem; cursor: pointer; padding: 4px 8px; transition: color 0.2s;">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle" id="navToggle" aria-label="منو">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">درباره‌پروژه</a></li>
+                <li><a href="#team">اعضای‌تیم</a></li>
+                <li><a href="#features">دستاوردهای‌پروژه</a></li>
+                <li><a href="#comparison">مقایسه‌عملکرد</a></li>
+                <li><a href="#gallery">گالری‌تصاویر</a></li>
+                <li><a href="#video">ویدیوی‌تایم‌لپس</a></li>
+            </ul>
         </div>
-        <ul class="nav-links" id="navLinks">
-            <li><a href="#about">درباره‌پروژه</a></li>
-            <li><a href="#team">اعضای‌تیم</a></li>
-            <li><a href="#features">دستاوردهای‌پروژه</a></li>
-            <li><a href="#comparison">مقایسه‌عملکرد</a></li>
-            <li><a href="#gallery">گالری‌تصاویر</a></li>
-            <li><a href="#video">ویدیوی‌تایم‌لپس</a></li>
-        </ul>
-    </div>
-    <!-- ... بقیه کد نوار پیشرفت ... -->
-</nav>
+    </nav>
     <section class="hero" id="home">
         <div class="container">
             <h1>طراحی و ساخت ردیاب خورشیدی دو محوره</h1>
@@ -1586,11 +1509,8 @@
         </div>
     </footer>
     <button class="back-to-top" id="backToTop" aria-label="بازگشت به بالا"><i class="fas fa-chevron-up"></i></button>
-    <!-- ===== مودال راهنمای جزئیات پروژه ===== -->
     <div id="helpModal" class="modal" style="display: none; position: fixed; z-index: 10000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6); backdrop-filter: blur(6px); animation: fadeInModal 0.3s ease;">
         <div class="help-modal-content">
-            
-            <!-- هدر مودال -->
             <div class="modal-header">
                 <div class="title-section">
                     <span class="icon">🤖</span>
@@ -1601,23 +1521,14 @@
                 </div>
                 <button onclick="closeHelpModal()" class="close-btn">✕</button>
             </div>
-            
-            <!-- محتوای اصلی (لیست سوالات) -->
             <div class="modal-body-scroll" id="helpModalBody">
-                <!-- سوالات با جاوااسکریپت ساخته می‌شوند -->
             </div>
-            
-            <!-- فوتر مودال -->
             <div class="help-footer">
                 <strong>برای مشاهده پاسخ، روی هر سوال کلیک کنید.</strong>
             </div>
-            
         </div>
     </div>
-    
-
     <script>
-        // ===== منو همبرگری =====
         const toggle = document.getElementById('navToggle');
         const links = document.getElementById('navLinks');
         toggle.addEventListener('click', () => {
@@ -1628,8 +1539,6 @@
                 links.classList.remove('open');
             });
         });
-
-        // ===== اسلایدر =====
         const track = document.getElementById('sliderTrack');
         const slides = track.querySelectorAll('.slider-slide');
         const totalSlides = slides.length;
@@ -1661,8 +1570,6 @@
         const sliderContainer = document.querySelector('.slider-container');
         sliderContainer.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
         sliderContainer.addEventListener('mouseleave', startAutoSlide);
-
-        // ===== بازگشت به بالا =====
         const backToTop = document.getElementById('backToTop');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 400) {
@@ -1674,8 +1581,6 @@
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-
-        // ===== نوار ناوبری =====
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 80) {
@@ -1684,8 +1589,6 @@
                 navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.06)';
             }
         });
-
-        // ===== انیمیشن اسکرول =====
         document.addEventListener('DOMContentLoaded', function() {
             const fadeElements = document.querySelectorAll('.fade-section');
             const observer = new IntersectionObserver((entries) => {
@@ -1700,8 +1603,6 @@
             });
             fadeElements.forEach(el => observer.observe(el));
         });
-
-        // ===== نوار پیشرفت مطالعه =====
         function updateReadingProgress() {
             const scrollTop = window.scrollY;
             const docHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -1717,8 +1618,6 @@
         }
         window.addEventListener('scroll', updateReadingProgress);
         window.addEventListener('load', updateReadingProgress);
-
-        // ===== مودال دستاوردها =====
         function openModal(id) {
             document.getElementById(id).style.display = 'block';
             document.body.style.overflow = 'hidden';
@@ -1743,24 +1642,7 @@
                 });
             }
         });
-
-        // ============================================================
-        // 🤖  لیست سوالات
-        // ============================================================
-        // ============================================================
-        // 🤖 راهنمای جزئیات پروژه (جایگزین چت‌بات)
-        // ============================================================
-
-        // ===== دیتابیس سوالات و پاسخ‌ها (۲۷ سوال) =====
-        // ============================================================
-// 🤖 راهنمای جزئیات پروژه (جایگزین چت‌بات)
-// ============================================================
-
-// ===== دیتابیس سوالات و پاسخ‌ها (۲۷ سوال) =====
         const helpDatabase = [
-            // ==========================================
-            // بخش ۱: پروژه و نحوه کار (۴ سوال)
-            // ==========================================
             {
                 question: "پروژه چطوری کار می‌کنه؟",
                 answer: `پروژه ما یک ردیاب خورشیدی دو محوره است که با استفاده از ۴ سنسور LDR، آردوینو UNO و دو موتور سروو (MG995 و SG90) طراحی و ساخته شده است.
@@ -1807,9 +1689,6 @@
         ۱۰. تست‌های مختلف و رفع اشکال
         ۱۱. تست نهایی و آماده‌سازی برای ارائه`
             },
-            // ==========================================
-            // بخش ۲: انرژی خورشیدی (۳ سوال)
-            // ==========================================
             {
                 question: "انرژی خورشیدی چیست؟",
                 answer: `انرژی خورشیدی، انرژی پاک و تجدیدپذیری است که از تابش خورشید به دست می‌آید. این انرژی یکی از فراوان‌ترین و در دسترس‌ترین منابع انرژی در جهان است.
@@ -1843,9 +1722,6 @@
         - ردیاب‌های هوشمند با هوش مصنوعی
         - ذخیره‌سازی پیشرفته`
             },
-            // ==========================================
-            // بخش ۳: پنل خورشیدی (۳ سوال)
-            // ==========================================
             {
                 question: "پنل خورشیدی چیست؟",
                 answer: `پنل خورشیدی وسیله‌ای است که نور خورشید را به برق تبدیل می‌کند. این کار با استفاده از سلول‌های فتوولتائیک (PV) انجام می‌شود که از مواد نیمه‌رسانا مانند سیلیکون ساخته شده‌اند.
@@ -1874,9 +1750,6 @@
         ۵. کیفیت پنل: پنل‌های مونوکریستال بازدهی بیشتری دارند
         ردیاب دو محوره با تنظیم زاویه و جلوگیری از سایه، بازدهی را افزایش می‌دهد.`
             },
-            // ==========================================
-            // بخش ۴: ردیاب خورشیدی (۴ سوال)
-            // ==========================================
             {
                 question: "ردیاب دو محوره چیست؟",
                 answer: `ردیاب خورشیدی دو محوره، سیستمی است که پنل خورشیدی را در دو جهت عمود بر هم (شرق-غرب و شمال-جنوب) حرکت می‌دهد تا همواره عمود بر تابش خورشید قرار گیرد.
@@ -1923,9 +1796,6 @@
         - مصرف انرژی برای حرکت
         - احتمال خرابی قطعات متحرک`
             },
-            // ==========================================
-            // بخش ۵: سنسورها (۲ سوال)
-            // ==========================================
             {
                 question: "سنسور LDR چیست؟",
                 answer: `LDR مخفف Light Dependent Resistor (مقاومت وابسته به نور) است. این سنسور با تغییر شدت نور، مقاومت خود را تغییر می‌دهد.
@@ -1947,9 +1817,6 @@
         - دو سنسور در جهت شرق و غرب (برای محور افقی)
         - دو سنسور در جهت شمال و جنوب (برای محور عمودی)`
             },
-            // ==========================================
-            // بخش ۶: آردوینو (۲ سوال)
-            // ==========================================
             {
                 question: "آردوینو چیست؟",
                 answer: `آردوینو یک پلتفرم متن‌باز (Open Source) برای ساخت پروژه‌های الکترونیکی است. این برد شامل یک میکروکنترلر است که می‌توان با زبان C++ برنامه‌نویسی کرد.
@@ -1977,9 +1844,6 @@
         - ۶ پین آنالوگ
         - حافظه فلش: ۳۲ کیلوبایت`
             },
-            // ==========================================
-            // بخش ۷: بازدهی (۲ سوال)
-            // ==========================================
             {
                 question: "بازدهی ردیاب چقدر است؟",
                 answer: `ردیاب خورشیدی دو محوره می‌تواند بازدهی پنل خورشیدی را به‌طور چشمگیری افزایش دهد:
@@ -2004,9 +1868,6 @@
         - دنبال کردن خورشید از طلوع تا غروب
         - جذب انرژی در ساعات ابتدایی و انتهایی روز`
             },
-            // ==========================================
-            // بخش ۸: هزینه (۲ سوال)
-            // ==========================================
             {
                 question: "هزینه ساخت ردیاب چقدر است؟",
                 answer: `هزینه کل پروژه ردیاب خورشیدی دو محوره:
@@ -2029,9 +1890,6 @@
         - قابلیت استفاده در مناطق بدون برق
         نکته: برای سیستم‌های کوچک آموزشی، هدف اصلی نمایش فناوری است.`
             },
-            // ==========================================
-            // بخش ۹: تیم (۲ سوال)
-            // ==========================================
             {
                 question: "تیم پروژه چه کسانی هستند؟",
                 answer: `پروژه ردیاب خورشیدی دو محوره توسط تیم سه نفره زیر انجام شده است:
@@ -2066,9 +1924,6 @@
         - انتخاب الگوریتم برتر
         - کدنویسی`
             },
-            // ==========================================
-            // بخش ۱۰: قطعات (۳ سوال)
-            // ==========================================
             {
                 question: "قطعات پروژه چیست؟",
                 answer: `لیست قطعات پروژه ردیاب خورشیدی دو محوره:
@@ -2119,18 +1974,13 @@
         - نزدیک به موتور نصب می‌شود`
             }
         ];
-
-        // ===== ساخت آیتم‌های راهنما =====
-        // ===== ساخت آیتم‌های راهنما =====
         function buildHelpItems() {
             const container = document.getElementById('helpModalBody');
             container.innerHTML = '';
-            
             helpDatabase.forEach((item, index) => {
                 const helpItem = document.createElement('div');
                 helpItem.className = 'help-item';
                 helpItem.id = `help-item-${index}`;
-                
                 const questionBtn = document.createElement('button');
                 questionBtn.className = 'help-question';
                 questionBtn.innerHTML = `
@@ -2140,19 +1990,15 @@
                 questionBtn.addEventListener('click', function() {
                     const parent = this.closest('.help-item');
                     const isOpen = parent.classList.contains('open');
-                    
-                    // بستن بقیه
                     document.querySelectorAll('.help-item').forEach(el => {
                         if (el !== parent) {
                             el.classList.remove('open');
                             el.querySelector('.answer-text').innerHTML = '';
                         }
                     });
-                    
                     if (!isOpen) {
                         parent.classList.add('open');
                         const answerText = parent.querySelector('.answer-text');
-                        // تایپ فقط اگر خالی باشه
                         if (answerText.innerHTML === '') {
                             typeText(answerText, item.answer);
                         }
@@ -2160,31 +2006,23 @@
                         parent.classList.remove('open');
                     }
                 });
-                
                 const answerDiv = document.createElement('div');
                 answerDiv.className = 'help-answer';
                 answerDiv.innerHTML = `<div class="answer-text"></div>`;
-                
                 helpItem.appendChild(questionBtn);
                 helpItem.appendChild(answerDiv);
                 container.appendChild(helpItem);
             });
         }
-
-        // ===== حالت تاریک/روشن =====
         const darkToggle = document.getElementById('darkToggle');
         const darkIcon = darkToggle.querySelector('i');
-
-        // بررسی حالت ذخیره شده
         if (localStorage.getItem('darkMode') === 'enabled') {
             document.body.classList.add('dark-mode');
             darkIcon.classList.remove('fa-moon');
             darkIcon.classList.add('fa-sun');
         }
-
         darkToggle.addEventListener('click', function() {
             document.body.classList.toggle('dark-mode');
-            
             if (document.body.classList.contains('dark-mode')) {
                 darkIcon.classList.remove('fa-moon');
                 darkIcon.classList.add('fa-sun');
@@ -2195,23 +2033,14 @@
                 localStorage.setItem('darkMode', 'disabled');
             }
         });
-
-        // ===== افکت تایپ با سرعت ثابت =====
         function typeText(element, text) {
             element.innerHTML = '';
-            
-            // توی HTML کاراکترهای خاص رو درست نشون بده
             const chars = text.split('');
             let index = 0;
-            
-            // سرعت ثابت (همه کاراکترها به یک اندازه)
-            const delayPerChar = 0.5; // میلی‌ثانیه بین هر کاراکتر
-            
+            const delayPerChar = 0.5;
             function typeChar() {
                 if (index < chars.length) {
                     const char = chars[index];
-                    
-                    // اگر کاراکتر \n بود، بره خط بعدی
                     if (char === '\n') {
                         const br = document.createElement('br');
                         element.appendChild(br);
@@ -2219,7 +2048,6 @@
                         setTimeout(typeChar, delayPerChar);
                         return;
                     }
-                    
                     const charSpan = document.createElement('span');
                     charSpan.className = 'char';
                     charSpan.textContent = char;
@@ -2228,41 +2056,30 @@
                     index++;
                     setTimeout(typeChar, delayPerChar);
                 } else {
-                    // حذف کرسر بعد از تایپ
                     const cursor = element.querySelector('.typing-cursor');
                     if (cursor) cursor.remove();
                 }
             }
-            
-            // کرسر رو اضافه کن
             const cursor = document.createElement('span');
             cursor.className = 'typing-cursor';
             element.appendChild(cursor);
-            
             typeChar();
         }
-
-        // ===== باز و بسته کردن مودال =====
         function openHelpModal() {
             document.getElementById('helpModal').style.display = 'block';
             document.body.style.overflow = 'hidden';
             buildHelpItems();
         }
-
         function closeHelpModal() {
             document.getElementById('helpModal').style.display = 'none';
             document.body.style.overflow = 'auto';
         }
-
-        // بستن با کلیک روی پس‌زمینه
         document.addEventListener('click', function(event) {
             const modal = document.getElementById('helpModal');
             if (event.target === modal) {
                 closeHelpModal();
             }
         });
-
-        // بستن با دکمه Escape
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape') {
                 const modal = document.getElementById('helpModal');
@@ -2271,7 +2088,6 @@
                 }
             }
         });
-
     </script>
 </body>
 </html>
