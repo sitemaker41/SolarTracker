@@ -1110,32 +1110,252 @@
                 font-size: 1rem;
             }
         }
+        /* ===== حالت تاریک ===== */
+        body.dark-mode {
+            background: #000000 !important;
+        }
+
+        /* همه متن‌ها سفید خالص */
+        body.dark-mode p,
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode li,
+        body.dark-mode span,
+        body.dark-mode div,
+        body.dark-mode a:not(.logo),
+        body.dark-mode .about-text p,
+        body.dark-mode .stat-card p,
+        body.dark-mode .team-card .role,
+        body.dark-mode .feature-card p,
+        body.dark-mode .modal-body p,
+        body.dark-mode .hero p,
+        body.dark-mode .section-title,
+        body.dark-mode .section-title span,
+        body.dark-mode .stat-card h3,
+        body.dark-mode .team-card h4,
+        body.dark-mode .feature-card h4,
+        body.dark-mode .modal-title,
+        body.dark-mode .modal-body p strong,
+        body.dark-mode #comparison > div:last-child p,
+        body.dark-mode .help-item .help-question,
+        body.dark-mode .help-item .help-answer,
+        body.dark-mode .help-footer strong,
+        body.dark-mode .help-footer,
+        body.dark-mode .comparison-box p,
+        body.dark-mode .navbar .logo,
+        body.dark-mode .navbar .logo span,
+        body.dark-mode .nav-links a,
+        body.dark-mode .feature-card span {
+            color: #ffffff !important;
+        }
+
+        /* ===== منوی همبرگری در حالت تاریک ===== */
+        body.dark-mode .nav-links {
+            background: #111111 !important;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.8) !important;
+        }
+
+        body.dark-mode .nav-links a {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .nav-links a:hover {
+            color: #aaaaaa !important;
+        }
+
+        /* ===== پس‌زمینه‌ها ===== */
+        body.dark-mode .navbar {
+            background: rgba(0, 0, 0, 0.95) !important;
+        }
+
+        body.dark-mode .hero {
+            background: #000000 !important;
+            border-bottom: 1px solid #222222 !important;
+        }
+
+        body.dark-mode section#team {
+            background: #0a0a0a !important;
+        }
+
+        body.dark-mode section#gallery {
+            background: #0a0a0a !important;
+        }
+
+        body.dark-mode footer {
+            background: #000000 !important;
+        }
+
+        /* ===== کارت‌ها و باکس‌ها ===== */
+        body.dark-mode .stat-card,
+        body.dark-mode .team-card,
+        body.dark-mode .feature-card,
+        body.dark-mode .modal-content,
+        body.dark-mode .help-modal-content,
+        body.dark-mode .help-item,
+        body.dark-mode .slider-container,
+        body.dark-mode #comparison > div:last-child {
+            background: #111111 !important;
+            border-color: #222222 !important;
+        }
+
+        body.dark-mode .help-modal-content .modal-body-scroll {
+            background: #0a0a0a !important;
+        }
+
+        body.dark-mode .help-modal-content .modal-header {
+            background: #000000 !important;
+        }
+
+        body.dark-mode .help-footer {
+            background: #111111 !important;
+        }
+
+        /* ===== دکمه‌ها ===== */
+        body.dark-mode .btn-outline {
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+        body.dark-mode .btn-outline:hover {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+
+        body.dark-mode .btn-primary {
+            background: #333333 !important;
+            color: #ffffff !important;
+        }
+        body.dark-mode .btn-primary:hover {
+            background: #555555 !important;
+        }
+
+        body.dark-mode .back-to-top {
+            background: #ffffff !important;
+            color: #000000 !important;
+        }
+        body.dark-mode .back-to-top:hover {
+            background: #cccccc !important;
+        }
+
+        body.dark-mode .chat-btn-glow {
+            background: #333333 !important;
+            color: #ffffff !important;
+        }
+        body.dark-mode .chat-btn-glow:hover {
+            background: #555555 !important;
+        }
+
+        /* ===== اسلایدر ===== */
+        body.dark-mode .slider-dot {
+            background: #444444 !important;
+        }
+        body.dark-mode .slider-dot.active {
+            background: #ffffff !important;
+        }
+        body.dark-mode .slider-btn {
+            background: rgba(255,255,255,0.9) !important;
+            color: #000000 !important;
+        }
+        body.dark-mode .slider-btn:hover {
+            background: #ffffff !important;
+        }
+
+        /* ===== دکمه بستن ===== */
+        body.dark-mode .close-modal {
+            color: #888888 !important;
+        }
+        body.dark-mode .close-modal:hover {
+            color: #ffffff !important;
+        }
+
+        /* ===== ویدیو ===== */
+        body.dark-mode .video-wrapper {
+            background: #111111 !important;
+            border-color: #333333 !important;
+        }
+
+        /* ===== نوار پیشرفت ===== */
+        body.dark-mode #readingProgressText {
+            color: #888888 !important;
+        }
+        body.dark-mode #readingProgressBar {
+            background: #ffffff !important;
+        }
+
+        /* ===== رفع مشکل هاور سوالات راهنما در حالت تاریک ===== */
+        body.dark-mode .help-item .help-question:hover {
+            background: #222222 !important;
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .help-item .help-question {
+            color: #ffffff !important;
+        }
+
+        /* ===== دکمه حالت تاریک ===== */
+        body.dark-mode .dark-toggle {
+            color: #ffffff !important;
+        }
+        body.dark-mode .dark-toggle:hover {
+            color: #aaaaaa !important;
+        }
+        .dark-toggle {
+            font-size: 2.0rem !important;  /* این عدد رو تغییر بدید */
+        }
+
+        /* ===== آیکون‌ها (همه سفید) ===== */
+        body.dark-mode i:not(.slider-btn i):not(.back-to-top i) {
+            color: #ffffff !important;
+        }
+
+        /* فلش‌های اسلایدر و دکمه بازگشت سیاه */
+        body.dark-mode .slider-btn i,
+        body.dark-mode .back-to-top i {
+            color: #000000 !important;
+        }
+
+        /* ===== تگ‌های اضافی ===== */
+        body.dark-mode .nav-links a:hover {
+            color: #ffffff !important;
+        }
+
+        body.dark-mode .modal-title {
+            border-bottom-color: #444444 !important;
+        }
+
+        /* ===== جزئیات بیشتر کلیک کنید ===== */
+        body.dark-mode .feature-card span {
+            color: #ffffff !important;
+            opacity: 1 !important;
+        }
     </style>
 </head>
 <body>
     <nav class="navbar" id="navbar">
-        <div class="container">
-            <a href="#home" class="logo">Solar<span>Tracker</span></a>
+    <div class="container">
+        <a href="#home" class="logo">Solar<span>Tracker</span></a>
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <!-- دکمه حالت تاریک (همیشه نمایش داده میشه) -->
+            <button class="dark-toggle" id="darkToggle" aria-label="تغییر حالت تاریک/روشن" style="background: none; border: none; color: #1A73E8; font-size: 1.4rem; cursor: pointer; padding: 4px 8px; transition: color 0.2s;">
+                <i class="fas fa-moon"></i>
+            </button>
+            <!-- دکمه همبرگری -->
             <button class="nav-toggle" id="navToggle" aria-label="منو">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">درباره‌پروژه</a></li>
-                <li><a href="#team">اعضای‌تیم</a></li>
-                <li><a href="#features">دستاوردهای‌پروژه</a></li>
-                <li><a href="#comparison">مقایسه‌عملکرد</a></li>
-                <li><a href="#gallery">گالری‌تصاویر</a></li>
-            </ul>
         </div>
-        <div style="position: relative; width: 100%; max-width: 1200px; margin: 4px auto 0; padding: 0 24px;">
-            <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px;">
-                <span id="readingProgressText" style="font-size: 0.7rem; color: #6c757d; white-space: nowrap; direction: ltr;">۰% مطالعه شده</span>
-                <div style="flex: 1; height: 3px; background: #e9ecef; border-radius: 4px; overflow: hidden;">
-                    <div id="readingProgressBar" style="width: 0%; height: 100%; background: #1A73E8; border-radius: 4px; transition: width 0.3s ease;"></div>
-                </div>
-            </div>
-        </div>
-    </nav>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">درباره‌پروژه</a></li>
+            <li><a href="#team">اعضای‌تیم</a></li>
+            <li><a href="#features">دستاوردهای‌پروژه</a></li>
+            <li><a href="#comparison">مقایسه‌عملکرد</a></li>
+            <li><a href="#gallery">گالری‌تصاویر</a></li>
+            <li><a href="#video">ویدیوی‌تایم‌لپس</a></li>
+        </ul>
+    </div>
+    <!-- ... بقیه کد نوار پیشرفت ... -->
+</nav>
     <section class="hero" id="home">
         <div class="container">
             <h1>طراحی و ساخت ردیاب خورشیدی دو محوره</h1>
@@ -1950,6 +2170,31 @@
                 container.appendChild(helpItem);
             });
         }
+
+        // ===== حالت تاریک/روشن =====
+        const darkToggle = document.getElementById('darkToggle');
+        const darkIcon = darkToggle.querySelector('i');
+
+        // بررسی حالت ذخیره شده
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            darkIcon.classList.remove('fa-moon');
+            darkIcon.classList.add('fa-sun');
+        }
+
+        darkToggle.addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            
+            if (document.body.classList.contains('dark-mode')) {
+                darkIcon.classList.remove('fa-moon');
+                darkIcon.classList.add('fa-sun');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                darkIcon.classList.remove('fa-sun');
+                darkIcon.classList.add('fa-moon');
+                localStorage.setItem('darkMode', 'disabled');
+            }
+        });
 
         // ===== افکت تایپ با سرعت ثابت =====
         function typeText(element, text) {
