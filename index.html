@@ -1113,6 +1113,16 @@
             background: #000000 !important;
         }
 
+        body.dark-mode .btn-proposal {
+            background: #333333 !important;
+            color: #ffffff !important;
+            border-color: #ffffff !important;
+        }
+        body.dark-mode .btn-proposal:hover {
+            background: #555555 !important;
+            color: #ffffff !important;
+        }
+
         body.dark-mode p,
         body.dark-mode h1,
         body.dark-mode h2,
@@ -1352,8 +1362,9 @@
             <h1>طراحی و ساخت ردیاب خورشیدی دو محوره</h1>
             <p>افزایش بازدهی پنل‌های خورشیدی با ردیابی دقیق در دو محور با استفاده از ۴ سنسور LDR و آردوینو</p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">مشاهده پروژه</a>
-                <button onclick="openPDFModal()" style="padding:14px 36px;background:#1A73E8;color:#fff;border:none;border-radius:40px;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.3s;font-family:inherit;box-shadow:0 4px 14px rgba(255,160,0,0.3);" onmouseover="this.style.background='#0D47A1';this.style.transform='scale(1.05)';" onmouseout="this.style.background='#1A73E8';this.style.transform='scale(1)';">📄 دانلود پروپوزال پروژه</button>
+                <button onclick="openPDFModal()" class="btn btn-primary btn-proposal" style="box-shadow: 0 4px 14px rgba(26,115,232,0.3);">
+                    📄 دانلود پروپوزال پروژه
+                </button>
                 <button onclick="openHelpModal()" class="chat-btn-glow" style="color: #fff; border: none; padding: 12px 28px; border-radius: 40px; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.3s; font-family: inherit;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 20px rgba(255,193,7,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 14px rgba(26,115,232,0.3)';">
                     🤖 راهنمای جزئیات پروژه
                 </button>
@@ -1601,7 +1612,6 @@
     <div id="pdfModal" style="display:none;position:fixed;z-index:9999;left:0;top:0;width:100%;height:100%;background-color:rgba(0,0,0,0.7);backdrop-filter:blur(4px);animation:fadeInModal 0.3s ease;justify-content:center;align-items:center;">
         <div style="background:#fff;margin:5% auto;padding:20px;border-radius:24px;max-width:900px;width:92%;max-height:90vh;box-shadow:0 20px 60px rgba(0,0,0,0.5);position:relative;overflow:hidden;display:flex;flex-direction:column;">
             <div style="display:flex;justify-content:space-between;align-items:center;padding-bottom:12px;border-bottom:1px solid #e9ecef;flex-shrink:0;">
-                <h3 style="margin:0;color:#0D47A1;font-size:1.3rem;font-family:Vazirmatn,Inter,sans-serif;">📄 پروپوزال ردیاب خورشیدی</h3>
                 <span onclick="closePDFModal()" style="font-size:2rem;font-weight:300;color:#aaa;cursor:pointer;line-height:1;transition:color 0.2s;font-family:Vazirmatn,Inter,sans-serif;">&times;</span>
             </div>
             <div style="flex:1;overflow:hidden;padding-top:16px;min-height:400px;">
