@@ -895,6 +895,56 @@
         .fade-section.delay-3 { transition-delay: 0.3s; }
         .fade-section.delay-4 { transition-delay: 0.4s; }
         .fade-section.delay-5 { transition-delay: 0.5s; }
+        /* ===== چینش اعضای تیم در موبایل ===== */
+        @media (max-width: 768px) {
+            .team-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+                justify-items: center;
+            }
+            
+            /* کارت اول و دوم در سطر اول */
+            .team-card:nth-child(1) {
+                grid-column: 1 / 2;
+                grid-row: 1 / 2;
+            }
+            .team-card:nth-child(2) {
+                grid-column: 2 / 3;
+                grid-row: 1 / 2;
+            }
+            
+            /* کارت سوم (پارسا اعظمی) در سطر دوم، وسط صفحه */
+            .team-card:nth-child(3) {
+                grid-column: 1 / 3;
+                grid-row: 2 / 3;
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .team-grid {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .team-card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team-grid {
+                gap: 12px;
+            }
+            .team-card:nth-child(3) {
+                max-width: 220px;
+            }
+        }
         @media (max-width: 992px) {
             .about-grid {
                 grid-template-columns: 1fr;
@@ -996,6 +1046,26 @@
                 font-size: 1.2rem;
                 bottom: 20px;
                 right: 20px;
+            }
+        }
+        /* ===== کارت افتخارات در موبایل (رتبه‌ها زیر هم) ===== */
+        @media (max-width: 768px) {
+            .achievement-card {
+                padding: 20px 16px !important;
+            }
+            
+            .achievement-card > div:last-child {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 8px !important;
+            }
+            
+            .achievement-card > div:last-child > div {
+                width: 100% !important;
+                max-width: 200px !important;
+                text-align: center !important;
+                padding: 6px 12px !important;
             }
         }
         @media (max-width: 480px) {
@@ -1111,6 +1181,39 @@
         }
         body.dark-mode {
             background: #000000 !important;
+        }
+
+        /* ===== کارت افتخارات در حالت تاریک ===== */
+        body.dark-mode .achievement-card {
+            background: linear-gradient(135deg, #0A1628 0%, #111111 100%) !important;
+            border-color: #1A73E8 !important;
+            box-shadow: 0 4px 20px rgba(26, 115, 232, 0.2) !important;
+        }
+
+        body.dark-mode .achievement-card h3 {
+            color: #64B5F6 !important;
+        }
+
+        body.dark-mode .achievement-card p {
+            color: #90CAF9 !important;
+        }
+
+        body.dark-mode .achievement-card .fa-medal {
+            color: #64B5F6 !important;
+            filter: drop-shadow(0 0 20px rgba(26,115,232,0.4)) !important;
+        }
+
+        body.dark-mode .achievement-card div[style*="background: #E8F0FE"] {
+            background: #0D2137 !important;
+            border-color: #1A73E8 !important;
+        }
+
+        body.dark-mode .achievement-card div[style*="background: #E8F0FE"] span {
+            color: #64B5F6 !important;
+        }
+
+        body.dark-mode .achievement-card div[style*="radial-gradient"] {
+            background: radial-gradient(circle, rgba(26,115,232,0.15) 0%, rgba(26,115,232,0.05) 50%, transparent 70%) !important;
         }
 
         body.dark-mode .btn-proposal {
@@ -1374,6 +1477,39 @@
     <section id="about">
         <div class="container">
             <h2 class="section-title">درباره <span>پروژه</span></h2>
+            <!-- ===== کارت افتخارات هماهنگ با استایل سایت ===== -->
+            <div class="stat-card achievement-card fade-section" style="grid-column: 1 / -1; background: linear-gradient(135deg, #E8F0FE 0%, #FFFFFF 100%); border: 2px solid #1A73E8; padding: 24px 28px; text-align: center; box-shadow: 0 4px 20px rgba(26, 115, 232, 0.15); position: relative; overflow: hidden;">
+                
+                <!-- ===== هاله آبی پشت مدال ===== -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; background: radial-gradient(circle, rgba(26,115,232,0.08) 0%, rgba(26,115,232,0.03) 50%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
+                
+                <!-- ===== محتوای اصلی ===== -->
+                <div style="display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; position: relative; z-index: 1;">
+                    <i class="fas fa-medal" style="font-size: 3.2rem; color: #1A73E8; filter: drop-shadow(0 0 15px rgba(26,115,232,0.3));"></i>
+                    <div>
+                        <h3 style="color: #0D47A1; font-size: 1.3rem; margin: 0; font-weight: 700;">جزء پروژه‌های برتر سمینار ۴۰</h3>
+                        <p style="color: #495057; font-size: 0.85rem; margin: 2px 0 0;">دبیرستان دوره‌ اول علامه‌ حلی‌ ۱ تهران</p>
+                    </div>
+                </div>
+                
+                <!-- ===== رتبه‌ها ===== -->
+                <div style="display: flex; justify-content: center; gap: 12px; margin-top: 12px; flex-wrap: wrap; position: relative; z-index: 1;">
+                    <div style="background: #E8F0FE; padding: 4px 16px; border-radius: 20px; border: 1px solid #1A73E8;">
+                        <span style="font-weight: 700; color: #0D47A1;">محتوای علمی:</span>
+                        <span style="color: #1A73E8; font-weight: 600;">A</span>
+                    </div>
+                    <div style="background: #E8F0FE; padding: 4px 16px; border-radius: 20px; border: 1px solid #1A73E8;">
+                        <span style="font-weight: 700; color: #0D47A1;">مدیریت پروژه:</span>
+                        <span style="color: #1A73E8; font-weight: 600;">A</span>
+                    </div>
+                    <div style="background: #E8F0FE; padding: 4px 16px; border-radius: 20px; border: 1px solid #1A73E8;">
+                        <span style="font-weight: 700; color: #0D47A1;">قالب‌بندی:</span>
+                        <span style="color: #1A73E8; font-weight: 600;">A</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ===== about-grid (متن + چهار کارت آماری) ===== -->
             <div class="about-grid fade-section">
                 <div class="about-text">
                     <p style="font-size: 1.05rem; line-height: 2; text-align: justify;">پروژه حاضر با هدف ارتقای کارایی پنل‌های خورشیدی، به طراحی و ساخت یک ردیاب خورشیدی دو محوره با استفاده از ۴ سنسور LDR اختصاص دارد. برخلاف سیستم‌های تک‌محوره که تنها در یک راستا حرکت می‌کنند، ردیاب دو محوره قادر است با پیگیری دقیق موقعیت خورشید در دو جهت عمودی و افقی، پنل را در هر لحظه عمود بر پرتوهای تابشی قرار دهد و با وجود تغییر زاویه خورشید نسبت به زمین در فصول مختلف سال، بازده را ثابت نگه دارد.</p>
